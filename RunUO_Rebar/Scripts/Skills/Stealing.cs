@@ -59,14 +59,14 @@ namespace Server.SkillHandlers
 				{
 					m_Thief.SendLocalizedMessage( 1005584 ); // Both hands must be free to steal.
 				}
-				else if ( root is Mobile && ((Mobile)root).Player && IsInnocentTo( m_Thief, (Mobile)root ) && !IsInGuild( m_Thief ) )
-				{
-					m_Thief.SendLocalizedMessage( 1005596 ); // You must be in the thieves guild to steal from other players.
-				}
-				else if ( SuspendOnMurder && root is Mobile && ((Mobile)root).Player && IsInGuild( m_Thief ) && m_Thief.Kills > 0 )
-				{
-					m_Thief.SendLocalizedMessage( 502706 ); // You are currently suspended from the thieves guild.
-				}
+				//else if ( root is Mobile && ((Mobile)root).Player && !IsInGuild( m_Thief ) )
+				//{
+				//	m_Thief.SendLocalizedMessage( 1005596 ); // You must be in the thieves guild to steal from other players.
+				//}
+				//else if ( SuspendOnMurder && root is Mobile && ((Mobile)root).Player && IsInGuild( m_Thief ) && m_Thief.Kills > 0 )
+				//{
+				//	m_Thief.SendLocalizedMessage( 502706 ); // You are currently suspended from the thieves guild.
+				//}
 				else if ( root is BaseVendor && ((BaseVendor)root).IsInvulnerable )
 				{
 					m_Thief.SendLocalizedMessage( 1005598 ); // You can't steal from shopkeepers.
@@ -173,11 +173,11 @@ namespace Server.SkillHandlers
 				{
 					m_Thief.SendLocalizedMessage( 502710 ); // You can't steal that!
 				}
-				else if ( toSteal.LootType == LootType.Newbied || toSteal.CheckBlessed( root ) )
-				{
-					m_Thief.SendLocalizedMessage( 502710 ); // You can't steal that!
-				}
-				else if ( Core.AOS && si == null && toSteal is Container )
+				///else if ( toSteal.LootType == LootType.Newbied || toSteal.CheckBlessed( root ) )
+				///{
+				///	m_Thief.SendLocalizedMessage( 502710 ); // You can't steal that!
+				///}
+				else if ( Core.AOS && si == null && toSteal is Container )///!!!need to add container in container mechanisms!!!
 				{
 					m_Thief.SendLocalizedMessage( 502710 ); // You can't steal that!
 				}
@@ -189,10 +189,10 @@ namespace Server.SkillHandlers
 				{
 					m_Thief.SendLocalizedMessage( 1060025, "", 0x66D ); // You're not skilled enough to attempt the theft of this item.
 				}
-				else if ( toSteal.Parent is Mobile )
-				{
-					m_Thief.SendLocalizedMessage( 1005585 ); // You cannot steal items which are equiped.
-				}
+				//else if ( toSteal.Parent is Mobile )
+				//{
+				//	m_Thief.SendLocalizedMessage( 1005585 ); // You cannot steal items which are equiped.
+				//}
 				else if ( root == m_Thief )
 				{
 					m_Thief.SendLocalizedMessage( 502704 ); // You catch yourself red-handed.
@@ -212,7 +212,7 @@ namespace Server.SkillHandlers
 				{
 					double w = toSteal.Weight + toSteal.TotalWeight;
 
-					if ( w > 10 )
+					if ( w > 15 )
 					{
 						m_Thief.SendMessage( "That is too heavy to steal." );
 					}
@@ -227,9 +227,9 @@ namespace Server.SkillHandlers
 							else if ( maxAmount > toSteal.Amount )
 								maxAmount = toSteal.Amount;
 
-							int amount = Utility.RandomMinMax( 1, maxAmount );
+                            int amount = toSteal.Amount;// Utility.RandomMinMax(1, maxAmount);
 
-							if ( amount >= toSteal.Amount )
+							if ( amount > toSteal.Amount )
 							{
 								int pileWeight = (int)Math.Ceiling( toSteal.Weight * toSteal.Amount );
 								pileWeight *= 10;
@@ -240,7 +240,7 @@ namespace Server.SkillHandlers
 							else
 							{
 								int pileWeight = (int)Math.Ceiling( toSteal.Weight * amount );
-								pileWeight *= 10;
+								pileWeight *= 15; //value changed to 15 for max
 
 								if ( m_Thief.CheckTargetSkill( SkillName.Stealing, toSteal, pileWeight - 22.5, pileWeight + 27.5 ) )
 								{
@@ -273,6 +273,7 @@ namespace Server.SkillHandlers
 						else
 						{
 							m_Thief.SendLocalizedMessage( 502723 ); // You fail to steal the item.
+                            m_Thief.RevealingAction();
 						}
 
 						caught = ( m_Thief.Skills[SkillName.Stealing].Value < Utility.Random( 150 ) );
@@ -284,7 +285,7 @@ namespace Server.SkillHandlers
 
 			protected override void OnTarget( Mobile from, object target )
 			{
-				from.RevealingAction();
+				//RevealingAction();
 
 				Item stolen = null;
 				object root = null;
@@ -380,7 +381,7 @@ namespace Server.SkillHandlers
 			else
 			{
 				m.Target = new Stealing.StealingTarget( m );
-				m.RevealingAction();
+				///m.RevealingAction();
 
 				m.SendLocalizedMessage( 502698 ); // Which item do you want to steal?
 			}
@@ -418,7 +419,7 @@ namespace Server.SkillHandlers
 
 		public static void Add( Item item, Mobile thief, Mobile victim )
 		{
-			Clean();
+			//Clean();
 
 			m_Queue.Enqueue( new StolenItem( item, thief, victim ) );
 		}
@@ -432,7 +433,7 @@ namespace Server.SkillHandlers
 
 		public static bool IsStolen( Item item, ref Mobile victim )
 		{
-			Clean();
+			//Clean();
 
 			foreach ( StolenItem si in m_Queue )
 			{
@@ -445,36 +446,5 @@ namespace Server.SkillHandlers
 
 			return false;
 		}
-
-		public static void ReturnOnDeath( Mobile killed, Container corpse )
-		{
-			Clean();
-
-			foreach ( StolenItem si in m_Queue )
-			{
-				if ( si.m_Stolen.RootParent == corpse && si.m_Victim != null && !si.IsExpired )
-				{
-					if ( si.m_Victim.AddToBackpack( si.m_Stolen ) )
-						si.m_Victim.SendLocalizedMessage( 1010464 ); // the item that was stolen is returned to you.
-					else
-						si.m_Victim.SendLocalizedMessage( 1010463 ); // the item that was stolen from you falls to the ground.
-
-					si.m_Expires = DateTime.Now; // such a hack
-				}
-			}
-		}
-
-		public static void Clean()
-		{
-			while ( m_Queue.Count > 0 )
-			{
-				StolenItem si = (StolenItem) m_Queue.Peek();
-
-				if ( si.IsExpired )
-					m_Queue.Dequeue();
-				else
-					break;
-			}
-		}
-	}
+    }
 }
