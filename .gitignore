@@ -13,6 +13,9 @@ TestResults
 *.user
 *.sln.docstates
 
+RunUO_Rebar\Scripts\Output\Scripts.CS.dll
+RunUO_Rebar\Scripts\Output\Scripts.CS.hash
+
 # Build results
 [Dd]ebug/
 [Rr]elease/
