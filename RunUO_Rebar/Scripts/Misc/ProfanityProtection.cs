@@ -16,7 +16,7 @@ namespace Server.Misc
 
 	public class ProfanityProtection
 	{
-		private static bool Enabled = false;
+		private static bool Enabled = true;
 		private static ProfanityAction Action = ProfanityAction.Disallow; // change here what to do when profanity is detected
 
 		public static void Initialize()
@@ -30,7 +30,7 @@ namespace Server.Misc
 			switch ( Action )
 			{
 				case ProfanityAction.None: return true;
-				case ProfanityAction.Disallow: return false;
+				case ProfanityAction.Disallow: return true;
 				case ProfanityAction.Criminal: from.Criminal = true; return true;
 				case ProfanityAction.CriminalAction: from.CriminalAction( false ); return true;
 				case ProfanityAction.Disconnect:
