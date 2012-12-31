@@ -9,16 +9,16 @@ namespace Server.Items
 {
 	public abstract class BaseContainer : Container
 	{
-		public override int DefaultMaxWeight
-		{
-			get
-			{
-				if ( IsSecure )
-					return 0;
-
-				return base.DefaultMaxWeight;
-			}
-		}
+        public override int DefaultMaxWeight { get { return 1600; } }
+		//{
+			//get
+			//{
+			//	if ( IsSecure )
+			//		return 0;
+//
+			//	return base.DefaultMaxWeight;
+			//}
+	//	}
 
 		public BaseContainer( int itemID ) : base( itemID )
 		{
