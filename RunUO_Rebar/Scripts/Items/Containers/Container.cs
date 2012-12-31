@@ -11,15 +11,13 @@ namespace Server.Items
 	{
         public override int DefaultMaxWeight { get { return 1600; } }
 		//{
-			//get
-			//{
-			//	if ( IsSecure )
-			//		return 0;
+		//    if ( IsSecure )
+		//	    return 0;
+        //
+         //       return base.DefaultMaxWeight;
+       // }
+	//}
 //
-			//	return base.DefaultMaxWeight;
-			//}
-	//	}
-
 		public BaseContainer( int itemID ) : base( itemID )
 		{
 		}
