@@ -1220,6 +1220,12 @@ namespace Server.Items
 				new RightArm().MoveToWorld( Location, Map );
 				new Head( dead.Name ).MoveToWorld( Location, Map );
 
+                dead.Backpack.Items.ForEach(i => 
+                {
+                    if (i.LootType != LootType.Blessed)
+                        i.DropToWorld(dead, Location);
+                });
+
 				SetFlag( CorpseFlag.Carved, true );
 
 				ProcessDelta();

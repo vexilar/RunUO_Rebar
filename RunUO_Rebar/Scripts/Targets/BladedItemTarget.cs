@@ -24,7 +24,7 @@ namespace Server.Targets
 				((UnholyBone)targeted).Carve( from, m_Item );
 			else
 				base.OnTargetOutOfRange (from, targeted);
-		}
+        }
 
 		protected override void OnTarget( Mobile from, object targeted )
 		{
