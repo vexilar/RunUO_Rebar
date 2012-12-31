@@ -70,11 +70,11 @@ namespace Server.Spells.Fourth
 				Caster.SendLocalizedMessage( 1005564, "", 0x22 ); // Wouldst thou flee during the heat of battle??
 				return false;
 			}
-			else if ( Server.Misc.WeightOverloading.IsOverloaded( Caster ) )
-			{
-				Caster.SendLocalizedMessage( 502359, "", 0x22 ); // Thou art too encumbered to move.
-				return false;
-			}
+			//else if ( Server.Misc.WeightOverloading.IsOverloaded( Caster ) )
+			//{
+			//	Caster.SendLocalizedMessage( 502359, "", 0x22 ); // Thou art too encumbered to move.
+			//	return false;
+			//}
 
 			return SpellHelper.CheckTravel( Caster, TravelCheckType.RecallFrom );
 		}
@@ -111,10 +111,10 @@ namespace Server.Spells.Fourth
 			{
 				Caster.SendLocalizedMessage( 1005564, "", 0x22 ); // Wouldst thou flee during the heat of battle??
 			}
-			else if ( Server.Misc.WeightOverloading.IsOverloaded( Caster ) )
-			{
-				Caster.SendLocalizedMessage( 502359, "", 0x22 ); // Thou art too encumbered to move.
-			}
+			//else if ( Server.Misc.WeightOverloading.IsOverloaded( Caster ) )
+			//{
+			//	Caster.SendLocalizedMessage( 502359, "", 0x22 ); // Thou art too encumbered to move.
+			//}
 			else if ( !map.CanSpawnMobile( loc.X, loc.Y, loc.Z ) )
 			{
 				Caster.SendLocalizedMessage( 501942 ); // That location is blocked.
