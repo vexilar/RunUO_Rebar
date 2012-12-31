@@ -25,8 +25,8 @@ namespace Server.Regions
 		{
 			BaseHouse house = BaseHouse.FindHouseAt( e.Mobile );
 
-			if ( house != null && !house.Public && !house.IsFriend( e.Mobile ) )
-				e.Mobile.Location = house.BanLocation;
+			//if ( house != null && !house.Public && !house.IsFriend( e.Mobile ) )
+			//	e.Mobile.Location = house.BanLocation;
 		}
 
 		public HouseRegion( BaseHouse house ) : base( null, house.Map, HousePriority, GetArea( house ) )
