@@ -9,7 +9,7 @@ namespace Server.Items
 {
 	public abstract class BaseContainer : Container
 	{
-        public override int DefaultMaxWeight { get { return 1600; } }
+        public override int DefaultMaxWeight { get { return base.DefaultMaxWeight; } }
 		//{
 		//    if ( IsSecure )
 		//	    return 0;
@@ -232,7 +232,7 @@ namespace Server.Items
 			return base.CheckHold( m, item, false, checkItems, plusItems, plusWeight );
 		}
 
-		public override int DefaultMaxWeight{ get{ return 1600; } }
+		public override int DefaultMaxWeight{ get{ return 10000; } }
 
 		public override bool CheckContentDisplay( Mobile from )
 		{
@@ -280,7 +280,7 @@ namespace Server.Items
 				if ( Core.ML ) {
 					Mobile m = ParentEntity as Mobile;
 					if ( m != null && m.Player && m.Backpack == this ) {
-						return 550;
+						return 10000;
 					} else {
 						return base.DefaultMaxWeight;
 					}
