@@ -13,8 +13,8 @@ TestResults
 *.user
 *.sln.docstates
 
-RunUO_Rebar\Scripts\Output\Scripts.CS.dll
-RunUO_Rebar\Scripts\Output\Scripts.CS.hash
+RunUO_Rebar/Scripts/Output/
+RunUO_Rebar/Saves/
 
 # Build results
 [Dd]ebug/
