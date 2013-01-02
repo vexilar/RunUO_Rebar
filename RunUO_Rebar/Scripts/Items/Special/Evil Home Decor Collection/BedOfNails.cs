@@ -170,7 +170,7 @@ namespace Server.Items
 		public BedOfNailsDeed()
 			: base()
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public BedOfNailsDeed( Serial serial )

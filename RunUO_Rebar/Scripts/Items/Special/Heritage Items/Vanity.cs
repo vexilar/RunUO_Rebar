@@ -54,7 +54,7 @@ namespace Server.Items
 		[Constructable]
 		public VanityDeed() : base()
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public VanityDeed( Serial serial ) : base( serial )

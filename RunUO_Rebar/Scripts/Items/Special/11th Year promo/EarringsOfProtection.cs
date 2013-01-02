@@ -79,7 +79,7 @@ namespace Server.Items
 			Resistances[ ( (AosElementAttribute)element ) ] = 2;
 
 			m_Attribute = element;
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public EarringsOfProtection( Serial serial )

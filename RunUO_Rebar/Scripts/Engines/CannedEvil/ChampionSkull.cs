@@ -17,7 +17,7 @@ namespace Server.Items
 		public ChampionSkull( ChampionSkullType type ) : base( 0x1AE1 )
 		{
 			m_Type = type;
-			LootType = LootType.Cursed;
+			LootType = LootType.Regular;
 
 			// TODO: All hue values
 			switch ( type )
@@ -62,8 +62,8 @@ namespace Server.Items
 			
 			if( version == 0 )
 			{
-				if ( LootType != LootType.Cursed )
-					LootType = LootType.Cursed;
+				if ( LootType != LootType.Regular )
+					LootType = LootType.Regular;
 	
 				if ( Insured )
 					Insured = false;

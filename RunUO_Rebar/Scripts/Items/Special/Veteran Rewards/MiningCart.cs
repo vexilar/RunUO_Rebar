@@ -352,7 +352,7 @@ namespace Server.Items
 		[Constructable]
 		public MiningCartDeed() : base()
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public MiningCartDeed( Serial serial ) : base( serial )

@@ -67,7 +67,7 @@ namespace Server.Items
 		[Constructable]
 		public LargeFishingNetDeed() : base()
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public LargeFishingNetDeed( Serial serial ) : base( serial )

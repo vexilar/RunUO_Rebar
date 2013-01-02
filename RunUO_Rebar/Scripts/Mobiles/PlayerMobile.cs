@@ -1582,13 +1582,13 @@ namespace Server.Mobiles
             if (((item is Container) && !(item is BaseQuiver)) || item is BagOfSending || item is KeyRing)
                 return false;
 
-            if ((item is Spellbook && item.LootType == LootType.Blessed) || item is Runebook || item is PotionKeg || item is Sigil)
+            if ((item is Spellbook && item.LootType == LootType.Regular) || item is Runebook || item is PotionKeg || item is Sigil)
                 return false;
 
             if (item.Stackable)
                 return false;
 
-            if (item.LootType == LootType.Cursed)
+            if (item.LootType == LootType.Regular)
                 return false;
 
             if (item.ItemID == 0x204E) // death shroud
@@ -1623,7 +1623,7 @@ namespace Server.Mobiles
                 BeginTarget(-1, false, TargetFlags.None, new TargetCallback(ToggleItemInsurance_Callback));
                 SendLocalizedMessage(1060869, "", 0x23); // You cannot insure that
             }
-            else if (item.LootType == LootType.Blessed || item.LootType == LootType.Newbied || item.BlessedFor == from)
+            else if (item.LootType == LootType.Regular || item.LootType == LootType.Newbied || item.BlessedFor == from)
             {
                 BeginTarget(-1, false, TargetFlags.None, new TargetCallback(ToggleItemInsurance_Callback));
                 SendLocalizedMessage(1060870, "", 0x23); // That item is blessed and does not need to be insured
@@ -2109,7 +2109,7 @@ namespace Server.Mobiles
 
         private bool FindItems_Callback(Item item)
         {
-            if (!item.Deleted && (item.LootType == LootType.Blessed || item.Insured == true))
+            if (!item.Deleted && (item.LootType == LootType.Regular || item.Insured == true))
             {
                 if (this.Backpack != item.ParentEntity)
                 {

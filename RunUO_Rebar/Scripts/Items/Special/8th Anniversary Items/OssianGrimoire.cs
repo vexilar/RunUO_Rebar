@@ -9,7 +9,7 @@ namespace Server.Items
 		[Constructable]
 		public OssianGrimoire() : base()
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 
 			SkillBonuses.SetValues( 0, SkillName.Necromancy, 10.0 );
 			Attributes.RegenMana = 1;

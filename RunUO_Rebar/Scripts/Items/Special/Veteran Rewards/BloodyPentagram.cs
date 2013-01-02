@@ -150,7 +150,7 @@ namespace Server.Items
 		[Constructable]
 		public BloodyPentagramDeed() : base()
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public BloodyPentagramDeed( Serial serial ) : base( serial )

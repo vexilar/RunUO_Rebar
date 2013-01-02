@@ -44,7 +44,7 @@ namespace Server.Items
 		[Constructable]
 		public BoilingCauldronDeed() : base()
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public BoilingCauldronDeed( Serial serial ) : base( serial )

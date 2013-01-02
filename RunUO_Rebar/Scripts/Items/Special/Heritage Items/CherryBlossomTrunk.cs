@@ -39,7 +39,7 @@ namespace Server.Items
 		[Constructable]
 		public CherryBlossomTrunkDeed() : base()
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public CherryBlossomTrunkDeed( Serial serial ) : base( serial )

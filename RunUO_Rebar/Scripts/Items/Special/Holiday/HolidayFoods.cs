@@ -69,7 +69,7 @@ namespace Server.Items
 		{
 			ItemID = 0x2bdd + Utility.Random(4);
 			Stackable = false;
-			LootType=LootType.Blessed;
+			LootType=LootType.Regular;
 		}
 
 		public override void OnDoubleClick( Mobile from )
@@ -127,7 +127,7 @@ namespace Server.Items
 		{
 			ItemID = Utility.RandomBool() ? 0x2be1 : 0x2be2;
 			Stackable = false;
-			LootType=LootType.Blessed;
+			LootType=LootType.Regular;
 		}
 
 		public GingerBreadCookie( Serial serial ) : base( serial )

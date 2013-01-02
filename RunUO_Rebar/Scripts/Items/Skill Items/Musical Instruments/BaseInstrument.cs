@@ -381,9 +381,9 @@ namespace Server.Items
 
 			if ( DisplayLootType )
 			{
-				if ( LootType == LootType.Blessed )
+				if ( LootType == LootType.Regular )
 					attrs.Add( new EquipInfoAttribute( 1038021 ) ); // blessed
-				else if ( LootType == LootType.Cursed )
+				else if ( LootType == LootType.Regular )
 					attrs.Add( new EquipInfoAttribute( 1049643 ) ); // cursed
 			}
 

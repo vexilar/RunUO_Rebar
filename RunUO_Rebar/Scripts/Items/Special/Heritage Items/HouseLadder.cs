@@ -78,7 +78,7 @@ namespace Server.Items
 		[Constructable]
 		public HouseLadderDeed() : base()
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public HouseLadderDeed( Serial serial ) : base( serial )

@@ -20,7 +20,7 @@ namespace Server.Items
 		{
 			Hue = DyedHue = 0x0001;
 			Redyable = false;
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public override void OnDoubleClick( Mobile from )

@@ -39,7 +39,7 @@ namespace Server.Items
 		[Constructable]
 		public TableWithBlueClothDeed() : base()
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public TableWithBlueClothDeed( Serial serial ) : base( serial )

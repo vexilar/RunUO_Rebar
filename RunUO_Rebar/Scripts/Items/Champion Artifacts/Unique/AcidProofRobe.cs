@@ -18,7 +18,7 @@ namespace Server.Items
 		public AcidProofRobe()
 		{
 			Hue = 0x455;
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public AcidProofRobe( Serial serial ) : base( serial )

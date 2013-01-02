@@ -67,7 +67,7 @@ namespace Server.Items
 		[Constructable]
 		public SuitOfSilverArmorDeed() : base()
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public SuitOfSilverArmorDeed( Serial serial ) : base( serial )

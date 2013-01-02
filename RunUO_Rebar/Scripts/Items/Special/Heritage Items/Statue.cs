@@ -55,7 +55,7 @@ namespace Server.Items
 		[Constructable]
 		public StoneStatueDeed() : base()
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public StoneStatueDeed( Serial serial ) : base( serial )

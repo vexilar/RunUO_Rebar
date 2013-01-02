@@ -102,7 +102,7 @@ namespace Server.Items
 		[Constructable]
 		public UnsettlingPortraitDeed() : base()
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public UnsettlingPortraitDeed( Serial serial ) : base( serial )

@@ -150,7 +150,7 @@ namespace Server.Items
 		[Constructable]
 		public GuillotineDeed() : base()
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public GuillotineDeed( Serial serial ) : base( serial )

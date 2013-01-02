@@ -11,7 +11,7 @@ namespace Server.Engines.Quests.Collector
 		[Constructable]
 		public EnchantedPaints() : base( 0xFC1 )
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 
 			Weight = 1.0;
 		}

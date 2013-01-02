@@ -130,7 +130,7 @@ namespace Server.Items
 		[Constructable]
 		public AppleTreeDeed() : base()
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public AppleTreeDeed( Serial serial ) : base( serial )
@@ -191,7 +191,7 @@ namespace Server.Items
 		[Constructable]
 		public PeachTreeDeed() : base()
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public PeachTreeDeed( Serial serial ) : base( serial )

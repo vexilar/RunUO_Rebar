@@ -41,7 +41,7 @@ namespace Server.Items
 		[Constructable]
 		public FlamingHead( StoneFaceTrapType type ) : base()
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 			Movable = false;
 			Type = type;
 		}
@@ -126,7 +126,7 @@ namespace Server.Items
 		[Constructable]
 		public FlamingHeadDeed() : base( 0x14F0 )
 		{			
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 			Weight = 1.0;
 		}
 

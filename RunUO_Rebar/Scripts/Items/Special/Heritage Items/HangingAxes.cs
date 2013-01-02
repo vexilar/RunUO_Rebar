@@ -53,7 +53,7 @@ namespace Server.Items
 		[Constructable]
 		public HangingAxesDeed() : base()
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public HangingAxesDeed( Serial serial ) : base( serial )

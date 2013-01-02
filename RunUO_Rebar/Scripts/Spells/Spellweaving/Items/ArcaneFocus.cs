@@ -18,7 +18,7 @@ namespace Server.Items
 
 		public ArcaneFocus( TimeSpan lifeSpan, int strengthBonus ) : base( 0x3155, lifeSpan )
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 			m_StrengthBonus = strengthBonus;
 		}
 

@@ -76,7 +76,7 @@ namespace Server.Items
 		[Constructable]
 		public MountedPixieOrangeDeed() : base()
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public MountedPixieOrangeDeed( Serial serial ) : base( serial )

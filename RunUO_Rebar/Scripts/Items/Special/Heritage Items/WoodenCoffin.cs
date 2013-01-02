@@ -82,7 +82,7 @@ namespace Server.Items
 		[Constructable]
 		public WoodenCoffinDeed() : base()
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public WoodenCoffinDeed( Serial serial ) : base( serial )

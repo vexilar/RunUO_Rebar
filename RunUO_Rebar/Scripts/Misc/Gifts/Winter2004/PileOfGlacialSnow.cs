@@ -12,7 +12,7 @@ namespace Server.Items
 		{
 			Hue = 0x480;
 			Weight = 1.0;
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public override int LabelNumber{ get{ return 1070874; } } // a Pile of Glacial Snow
@@ -37,7 +37,7 @@ namespace Server.Items
 			if ( version == 0 )
 			{
 				Weight = 1.0;
-				LootType = LootType.Blessed;
+				LootType = LootType.Regular;
 			}
 		}
 

@@ -53,7 +53,7 @@ namespace Server.Engines.BulkOrders
 		public BulkOrderBook() : base( 0x2259 )
 		{
 			Weight = 1.0;
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 
 			m_Entries = new ArrayList();
 			m_Filter = new BOBFilter();

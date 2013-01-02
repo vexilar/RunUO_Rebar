@@ -43,7 +43,7 @@ namespace Server.Items
 			m_Dipper = dipper;
 
 			Weight = 1.0;
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 			Light = LightType.Circle300;
 			Hue = Utility.RandomDyedHue();
 		}

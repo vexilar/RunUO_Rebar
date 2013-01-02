@@ -39,7 +39,7 @@ namespace Server.Items
 		[Constructable]
 		public PeachTrunkDeed() : base()
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public PeachTrunkDeed( Serial serial ) : base( serial )

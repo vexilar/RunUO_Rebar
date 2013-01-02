@@ -42,7 +42,7 @@ namespace Server.Items
 		[Constructable]
 		public RewardBrazier( int itemID ) : base( itemID )
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 			Weight = 10.0;
 		}
 
@@ -144,7 +144,7 @@ namespace Server.Items
 		[Constructable]
 		public RewardBrazierDeed() : base( 0x14F0 )
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 			Weight = 1.0;
 		}
 

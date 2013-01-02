@@ -14,7 +14,7 @@ namespace Server.Items
 		public ShaminoCrossbow()
 		{
 			Hue = 0x504;
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 
 			Attributes.AttackChance = 15;
 			Attributes.WeaponDamage = 40;

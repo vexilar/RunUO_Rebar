@@ -240,7 +240,7 @@ namespace Server.Items
 		public FountainOfLifeDeed( int charges )
 			: base()
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 			m_Charges = charges;
 		}
 

@@ -47,7 +47,7 @@ namespace Server.Items
 		[Constructable]
 		public BlueDecorativeRugDeed() : base()
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public BlueDecorativeRugDeed( Serial serial ) : base( serial )

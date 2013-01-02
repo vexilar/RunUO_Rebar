@@ -12,7 +12,7 @@ namespace Server.Items
 		{
 			Hue = 0x481;
 			Weight = 1.0;
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public override int LabelNumber{ get{ return 1005578; } } // a pile of snow
@@ -37,7 +37,7 @@ namespace Server.Items
 			if ( version == 0 )
 			{
 				Weight = 1.0;
-				LootType = LootType.Blessed;
+				LootType = LootType.Regular;
 			}
 		}
 

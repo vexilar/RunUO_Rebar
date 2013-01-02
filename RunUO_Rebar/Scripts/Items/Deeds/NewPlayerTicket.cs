@@ -24,7 +24,7 @@ namespace Server.Items
 		public NewPlayerTicket() : base( 0x14EF )
 		{
 			Weight = 1.0;
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public override void GetProperties( ObjectPropertyList list )

@@ -64,7 +64,7 @@ namespace Server.Items
 		{
 			m_Maker = maker;
 
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 			Hue = m_Hues[Utility.Random(m_Hues.Length)];
 			SoundID = 0x0F5 + Utility.Random(14);
 		}

@@ -14,7 +14,7 @@ namespace Server.Items
 		public HolySword()
 		{
 			Hue = 0x482;
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 
 			Slayer = SlayerName.Silver;
 

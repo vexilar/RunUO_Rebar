@@ -13,7 +13,7 @@ namespace Server.Items
 		public Coal() : base( 0x19b9 )
 		{
 			Stackable = false;
-			LootType=LootType.Blessed;
+			LootType=LootType.Regular;
 			Hue = 0x965;
 		}
 
@@ -44,7 +44,7 @@ namespace Server.Items
 			int[] m_CardHues=new int[]{ 0x45, 0x27, 0x3d0 };
 			Hue = m_CardHues[Utility.Random(m_CardHues.Length)];
 			Stackable = false;
-			LootType=LootType.Blessed;
+			LootType=LootType.Regular;
 			Movable=true;
 		}
 
@@ -71,7 +71,7 @@ namespace Server.Items
 		public Spam() : base( 0x1044 )
 		{
 			Stackable = false;
-			LootType=LootType.Blessed;
+			LootType=LootType.Regular;
 		}
 
 		public Spam( Serial serial ) : base( serial )

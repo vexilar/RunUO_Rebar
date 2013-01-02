@@ -15,7 +15,7 @@ namespace Server.Items
          this.Name = "a crystal ball"; 
          this.Weight = 10; 
          this.Stackable = false; 
-         this.LootType = LootType.Blessed; 
+         this.LootType = LootType.Regular; 
          this.Light = LightType.Circle150; 
       } 
 

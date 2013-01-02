@@ -27,7 +27,7 @@ namespace Server.Items
 		public InteriorDecorator() : base( 0xFC1 )
 		{
 			Weight = 1.0;
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public override int LabelNumber{ get{ return 1041280; } } // an interior decorator

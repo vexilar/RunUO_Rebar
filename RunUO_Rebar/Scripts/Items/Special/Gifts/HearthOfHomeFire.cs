@@ -61,7 +61,7 @@ namespace Server.Items
 		[Constructable]
 		public HearthOfHomeFireDeed()
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public override void OnDoubleClick( Mobile from )

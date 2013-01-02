@@ -43,7 +43,7 @@ namespace Server.Mobiles
 
 			Layer = Layer.Invalid;
 
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public override void GetProperties( ObjectPropertyList list )
@@ -190,7 +190,7 @@ namespace Server.Mobiles
 		public override void Deserialize( GenericReader reader )
 		{
 			base.Deserialize( reader );
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 
 			int version = reader.ReadInt();
 

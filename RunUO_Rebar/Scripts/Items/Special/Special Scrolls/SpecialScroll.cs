@@ -26,7 +26,7 @@ namespace Server.Items
 
 		public SpecialScroll( SkillName skill, double value ) : base( 0x14F0 )
 		{
-			LootType = LootType.Cursed;
+			LootType = LootType.Regular;
 			Weight = 1.0;
 			
 			m_Skill = skill;

@@ -67,7 +67,7 @@ namespace Server.Items
 		[Constructable]
 		public BrokenChestOfDrawersDeed() : base()
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public BrokenChestOfDrawersDeed( Serial serial ) : base( serial )

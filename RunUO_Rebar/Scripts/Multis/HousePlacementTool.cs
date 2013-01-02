@@ -16,7 +16,7 @@ namespace Server.Items
 		public HousePlacementTool() : base( 0x14F6 )
 		{
 			Weight = 3.0;
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public override void OnDoubleClick( Mobile from )

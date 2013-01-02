@@ -10,7 +10,7 @@ namespace Server.Items
 		public SnowyTree() : base( 0x2377 )
 		{
 			Weight = 1.0;
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public SnowyTree( Serial serial ) : base( serial )

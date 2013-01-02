@@ -12,7 +12,7 @@ namespace Server.Items
 			: base( 0x0EB0 )
 		{
 			Hue = 0x20;
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public RoseInAVase( Serial serial )

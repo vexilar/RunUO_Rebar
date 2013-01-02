@@ -120,7 +120,7 @@ namespace Server.Items
 		public SoulStone( string account, int inactiveItemID, int activeItemID ) : base( inactiveItemID )
 		{
 			Light = LightType.Circle300;
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 
 			m_InactiveItemID = inactiveItemID;
 			m_ActiveItemID = activeItemID;

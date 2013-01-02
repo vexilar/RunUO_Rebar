@@ -27,7 +27,7 @@ namespace Server.Items
 		public TapestryOfSosaria() : base( 0x234E )
 		{
 			Weight = 1.0;
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public override void GetContextMenuEntries( Mobile from, List<ContextMenuEntry> list )

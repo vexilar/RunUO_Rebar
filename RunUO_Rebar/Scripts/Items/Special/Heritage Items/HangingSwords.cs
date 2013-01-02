@@ -53,7 +53,7 @@ namespace Server.Items
 		[Constructable]
 		public HangingSwordsDeed() : base()
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public HangingSwordsDeed( Serial serial ) : base( serial )

@@ -34,7 +34,7 @@ namespace Server.Items
 					}
 				}
 
-				if ( item.LootType == LootType.Blessed || item.BlessedFor == from || (Mobile.InsuranceEnabled && item.Insured) ) // Check if its already newbied (blessed)
+				if ( item.LootType == LootType.Regular || item.BlessedFor == from || (Mobile.InsuranceEnabled && item.Insured) ) // Check if its already newbied (blessed)
 				{
 					from.SendLocalizedMessage( 1045113 ); // That item is already blessed
 				}
@@ -48,7 +48,7 @@ namespace Server.Items
 				}
 				else
 				{
-					item.LootType = LootType.Blessed;
+					item.LootType = LootType.Regular;
 					from.SendLocalizedMessage( 1010026 ); // You bless the item....
 
 					m_Deed.Delete(); // Delete the bless deed
@@ -72,7 +72,7 @@ namespace Server.Items
 		public ClothingBlessDeed() : base( 0x14F0 )
 		{
 			Weight = 1.0;
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public ClothingBlessDeed( Serial serial ) : base( serial )
@@ -89,7 +89,7 @@ namespace Server.Items
 		public override void Deserialize( GenericReader reader )
 		{
 			base.Deserialize( reader );
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 
 			int version = reader.ReadInt();
 		}

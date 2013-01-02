@@ -120,7 +120,7 @@ namespace Server.Items
 
 			public bool IsOwner( Mobile m )
 			{
-				if ( m_Item.LootType == LootType.Cursed )   //Cursed Items are part of everyone's instanced corpse... (?)
+				if ( m_Item.LootType == LootType.Regular )   //Cursed Items are part of everyone's instanced corpse... (?)
 					return true;
 
 				if ( m == null )
@@ -168,7 +168,7 @@ namespace Server.Items
 			{
 				Item item = this.Items[i];
 
-				if ( item.LootType != LootType.Cursed ) //Don't have curesd items take up someone's item spot.. (?)
+				if ( item.LootType != LootType.Regular ) //Don't have curesd items take up someone's item spot.. (?)
 				{
 					if ( item.Stackable )
 						m_Stackables.Add( item );
@@ -1222,7 +1222,7 @@ namespace Server.Items
 
                 dead.Backpack.Items.ForEach(i => 
                 {
-                    if (i.LootType != LootType.Blessed)
+                    if (i.LootType != LootType.Regular)
                         i.DropToWorld(dead, Location);
                 });
 

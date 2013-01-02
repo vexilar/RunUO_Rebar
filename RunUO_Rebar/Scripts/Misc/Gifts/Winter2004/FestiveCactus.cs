@@ -10,7 +10,7 @@ namespace Server.Items
 		public FestiveCactus() : base( 0x2376 )
 		{
 			Weight = 1.0;
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public FestiveCactus( Serial serial ) : base( serial )

@@ -112,7 +112,7 @@ namespace Server.Items
 			m_Type = type;
 
 			Weight = 1.0;
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public MiniHouseDeed( Serial serial ) : base( serial )

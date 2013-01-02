@@ -23,7 +23,7 @@ namespace Server.Items
 		public SamuraiHelm() : base( 0x236C )
 		{
 			Weight = 5.0;
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 
 			Attributes.DefendChance = 15;
 			ArmorAttributes.SelfRepair = 10;

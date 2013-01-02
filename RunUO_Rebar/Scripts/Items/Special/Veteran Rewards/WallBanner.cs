@@ -287,7 +287,7 @@ namespace Server.Items
 		[Constructable]
 		public WallBannerDeed() : base()
 		{			
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public WallBannerDeed( Serial serial ) : base( serial )

@@ -18,7 +18,7 @@ namespace Server.Items
 
 		public BaseFormTalisman() : base( 0x2F59 )
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 			Layer = Layer.Talisman;
 			Weight = 1.0;
 		}

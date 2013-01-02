@@ -14,7 +14,7 @@ namespace Server.Items
 		[Constructable]
 		public HoodedShroudOfShadows( int hue ) : base( 0x2684, hue )
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 			Weight = 3.0;
 		}
 

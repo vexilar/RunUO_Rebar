@@ -15,7 +15,7 @@ namespace Server.Items
 		[Constructable]
 		public HeritageToken() : base( 0x367A )
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 			Weight = 5.0;
 		}
 

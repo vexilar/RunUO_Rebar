@@ -136,7 +136,7 @@ namespace Server.Items
 		[Constructable]
 		public CurtainsDeed() : base()
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public CurtainsDeed( Serial serial ) : base( serial )

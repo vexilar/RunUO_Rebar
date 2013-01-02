@@ -312,7 +312,7 @@ namespace Server.Items
 		public RewardRobe( int hue, int labelNumber ) : base( 0x1F03, hue )
 		{
 			Weight = 3.0;
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 
 			m_LabelNumber = labelNumber;
 		}
@@ -437,7 +437,7 @@ namespace Server.Items
 		public RewardDress( int hue, int labelNumber ) : base( 0x1F01, hue )
 		{
 			Weight = 2.0;
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 
 			m_LabelNumber = labelNumber;
 		}

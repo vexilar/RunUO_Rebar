@@ -212,7 +212,7 @@ namespace Server.Items
 					{
 						from.Send( new AsciiMessage( m_Bag.Serial, m_Bag.ItemID, MessageType.Regular, 0x3B2, 3, "", "You cannot send a container through the bag of sending." ) );
 					}
-					else if ( item.LootType == LootType.Cursed )
+					else if ( item.LootType == LootType.Regular )
 					{
 						MessageHelper.SendLocalizedMessageTo( m_Bag, from, 1054108, 0x59 ); // The bag of sending rejects the cursed item.
 					}

@@ -110,7 +110,7 @@ namespace Server.Regions
                             {
                                 if ((item.Layer != Layer.Bank) && (item.Layer != Layer.Backpack) && (item.Layer != Layer.Hair) && (item.Layer != Layer.FacialHair) && (item.Layer != Layer.Mount))
                                 {
-                                    if ((item.LootType != LootType.Blessed))
+                                    if ((item.LootType != LootType.Regular))
                                     {
                                         item.MoveToWorld(m.Corpse.Location, m.Corpse.Map);
                                     }
@@ -129,7 +129,7 @@ namespace Server.Regions
                         {
                             if ((item.Layer != Layer.Bank) && (item.Layer != Layer.Backpack) && (item.Layer != Layer.Hair) && (item.Layer != Layer.FacialHair) && (item.Layer != Layer.Mount))
                             {
-                                if ((item.LootType != LootType.Blessed))
+                                if ((item.LootType != LootType.Regular))
                                 {
                                     item.MoveToWorld(m.Corpse.Location, m.Corpse.Map);
                                 }

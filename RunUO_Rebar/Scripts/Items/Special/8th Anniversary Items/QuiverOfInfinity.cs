@@ -9,7 +9,7 @@ namespace Server.Items
 		[Constructable]
 		public QuiverOfInfinity() : base( 0x2B02 )
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 			Weight = 8.0;
 
 			WeightReduction = 30;

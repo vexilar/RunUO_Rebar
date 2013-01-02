@@ -193,7 +193,7 @@ namespace Server.Items
 		[Constructable]
 		public TreeStumpDeed() : base()
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public TreeStumpDeed( Serial serial ) : base( serial )

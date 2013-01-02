@@ -219,7 +219,7 @@ namespace Server.Items
 			}
 			else
 			{
-				LootType = LootType.Cursed;
+				LootType = LootType.Regular;
 				Insured = false;
 			}
 		}

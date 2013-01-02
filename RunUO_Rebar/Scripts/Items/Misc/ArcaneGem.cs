@@ -78,7 +78,7 @@ namespace Server.Items
 					from.SendLocalizedMessage( 1042001 ); // That must be in your pack for you to use it.
 					return;
 				}
-				else if ( item.LootType == LootType.Blessed )
+				else if ( item.LootType == LootType.Regular )
 				{
 					from.SendMessage( "You can only use this on exceptionally crafted robes, thigh boots, cloaks, or leather gloves." );
 					return;

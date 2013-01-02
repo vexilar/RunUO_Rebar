@@ -52,7 +52,7 @@ namespace Server.Items
 		[Constructable]
 		public HangingSkeleton( int itemID ) : base( itemID )
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 			Movable = false;
 		}
 
@@ -132,7 +132,7 @@ namespace Server.Items
 		[Constructable]
 		public HangingSkeletonDeed() : base( 0x14F0 )
 		{			
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 			Weight = 1.0;
 		}
 

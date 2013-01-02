@@ -85,7 +85,7 @@ namespace Server.Engines.BulkOrders
 		{
 			Weight = 1.0;
 			Hue = hue; // Blacksmith: 0x44E; Tailoring: 0x483
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 
 			m_AmountMax = amountMax;
 			m_RequireExceptional = requireExeptional;
@@ -96,7 +96,7 @@ namespace Server.Engines.BulkOrders
 		public LargeBOD() : base( Core.AOS ? 0x2258 : 0x14EF )
 		{
 			Weight = 1.0;
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public override void GetProperties( ObjectPropertyList list )

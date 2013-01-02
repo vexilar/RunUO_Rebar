@@ -13,7 +13,7 @@ namespace Server.Items
 		public ContractOfEmployment() : base( 0x14F0 )
 		{
 			Weight = 1.0;
-			//LootType = LootType.Blessed;
+			//LootType = LootType.Regular;
 		}
 
 		public ContractOfEmployment( Serial serial ) : base( serial )

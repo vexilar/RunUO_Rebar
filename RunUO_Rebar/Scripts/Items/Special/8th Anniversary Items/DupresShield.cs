@@ -23,7 +23,7 @@ namespace Server.Items
 		[Constructable]
 		public DupresShield() : base( 0x2B01 )
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 			Weight = 6.0;
 
 			Attributes.BonusHits = 5;

@@ -95,7 +95,7 @@ namespace Server.Items
 		[Constructable]
 		public BoneCouchDeed() : base()
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public BoneCouchDeed( Serial serial ) : base( serial )

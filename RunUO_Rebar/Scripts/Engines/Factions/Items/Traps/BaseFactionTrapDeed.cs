@@ -29,7 +29,7 @@ namespace Server.Factions
 		public BaseFactionTrapDeed( int itemID ) : base( itemID )
 		{
 			Weight = 1.0;
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public BaseFactionTrapDeed( bool createdFromDeed ) : this( 0x14F0 )

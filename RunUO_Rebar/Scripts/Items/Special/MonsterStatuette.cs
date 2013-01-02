@@ -183,7 +183,7 @@ namespace Server.Items
 		[Constructable]
 		public MonsterStatuette( MonsterStatuetteType type ) : base( MonsterStatuetteInfo.GetInfo( type ).ItemID )
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 
 			m_Type = type;
 

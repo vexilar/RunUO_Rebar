@@ -43,7 +43,7 @@ namespace Server.Items
 		public GingerBreadHouseDeed() 
 		{
 			Weight = 1.0;
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public GingerBreadHouseDeed( Serial serial ) : base( serial )

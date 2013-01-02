@@ -19,7 +19,7 @@ namespace Server.Items
 		[Constructable]
 		public SpecialDyeTub()
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public override void OnDoubleClick( Mobile from )

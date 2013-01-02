@@ -164,7 +164,7 @@ namespace Server.Items
 		[Constructable]
 		public AwesomeDisturbingPortraitDeed() : base()
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public AwesomeDisturbingPortraitDeed( Serial serial ) : base( serial )

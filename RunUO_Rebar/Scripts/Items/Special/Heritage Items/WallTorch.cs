@@ -88,7 +88,7 @@ namespace Server.Items
 		[Constructable]
 		public WallTorchDeed() : base()
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public WallTorchDeed( Serial serial ) : base( serial )

@@ -24,7 +24,7 @@ namespace Server.Multis
 		public BaseDockedBoat( int id, Point3D offset, BaseBoat boat ) : base( 0x14F4 )
 		{
 			Weight = 1.0;
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 
 			m_MultiID = id;
 			m_Offset = offset;
@@ -70,7 +70,7 @@ namespace Server.Multis
 			}
 
 			if ( LootType == LootType.Newbied )
-				LootType = LootType.Blessed;
+				LootType = LootType.Regular;
 
 			if ( Weight == 0.0 )
 				Weight = 1.0;

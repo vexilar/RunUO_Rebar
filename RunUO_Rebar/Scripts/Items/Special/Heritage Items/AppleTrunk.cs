@@ -39,7 +39,7 @@ namespace Server.Items
 		[Constructable]
 		public AppleTrunkDeed() : base()
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public AppleTrunkDeed( Serial serial ) : base( serial )

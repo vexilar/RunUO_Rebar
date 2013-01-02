@@ -75,7 +75,7 @@ namespace Server.Items
 		[Constructable]
 		public PottedCactusDeed() : base( 0x14F0 )
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 			Weight = 1.0;
 		}
 

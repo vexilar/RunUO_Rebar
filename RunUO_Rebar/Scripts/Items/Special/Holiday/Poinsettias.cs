@@ -10,7 +10,7 @@ namespace Server.Items
 		public RedPoinsettia() : base( 0x2330 )
 		{
 			Weight = 1.0;
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public RedPoinsettia( Serial serial ) : base( serial )
@@ -38,7 +38,7 @@ namespace Server.Items
 		public WhitePoinsettia() : base( 0x2331 )
 		{
 			Weight = 1.0;
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public WhitePoinsettia( Serial serial ) : base( serial )

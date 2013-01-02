@@ -36,7 +36,7 @@ namespace Server.Items
 				if ( m_FactionState == null )
 					Hue = 0;
 
-				LootType = ( m_FactionState == null ? LootType.Regular : LootType.Blessed );
+				LootType = ( m_FactionState == null ? LootType.Regular : LootType.Regular );
 			}
 		}
 		#endregion
@@ -699,9 +699,9 @@ namespace Server.Items
 		{
 			if ( DisplayLootType )
 			{
-				if ( LootType == LootType.Blessed )
+				if ( LootType == LootType.Regular )
 					attrs.Add( new EquipInfoAttribute( 1038021 ) ); // blessed
-				else if ( LootType == LootType.Cursed )
+				else if ( LootType == LootType.Regular )
 					attrs.Add( new EquipInfoAttribute( 1049643 ) ); // cursed
 			}
 

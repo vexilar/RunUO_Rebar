@@ -68,7 +68,7 @@ namespace Server.Items
 		[Constructable]
 		public OrigamiButterfly() : base( 0x2838 )
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public OrigamiButterfly( Serial serial ) : base( serial )
@@ -97,7 +97,7 @@ namespace Server.Items
 		[Constructable]
 		public OrigamiSwan() : base( 0x2839 )
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 
 			
 		}
@@ -128,7 +128,7 @@ namespace Server.Items
 		[Constructable]
 		public OrigamiFrog() : base( 0x283A )
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 
 			
 		}
@@ -159,7 +159,7 @@ namespace Server.Items
 		[Constructable]
 		public OrigamiShape() : base( 0x283B )
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 
 			
 		}
@@ -190,7 +190,7 @@ namespace Server.Items
 		[Constructable]
 		public OrigamiSongbird() : base( 0x283C )
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 
 			
 		}
@@ -221,7 +221,7 @@ namespace Server.Items
 		[Constructable]
 		public OrigamiFish() : base( 0x283D )
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 
 			
 		}

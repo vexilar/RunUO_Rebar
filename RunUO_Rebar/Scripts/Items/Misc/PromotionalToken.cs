@@ -15,7 +15,7 @@ namespace Server.Items
 
 		public PromotionalToken() : base( 0x2AAA )
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 			Light = LightType.Circle300;
 			Weight = 5.0;
 		}

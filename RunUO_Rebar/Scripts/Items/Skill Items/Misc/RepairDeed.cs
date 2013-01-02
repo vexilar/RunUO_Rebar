@@ -137,7 +137,7 @@ namespace Server.Items
 			m_Skill = skill;
 			m_Crafter = crafter;
 			Hue = 0x1BC;
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public RepairDeed( Serial serial ) : base( serial )

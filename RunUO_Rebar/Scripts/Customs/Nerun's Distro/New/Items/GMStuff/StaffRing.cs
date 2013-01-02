@@ -24,7 +24,7 @@ namespace Server.Items
 			Attributes.SpellDamage = 30;
 			Attributes.CastRecovery = 6;
 			Attributes.CastSpeed = 4;
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public StaffRing( Serial serial ) : base( serial )

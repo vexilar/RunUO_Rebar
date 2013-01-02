@@ -23,7 +23,7 @@ namespace Server.Items
 		[Constructable]
 		public RunebookDyeTub()
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public override void OnDoubleClick( Mobile from )

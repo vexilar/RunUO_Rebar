@@ -59,7 +59,7 @@ namespace Server.Items
 		public RoseOfTrinsic() : base( 0x234D )
 		{
 			Weight = 1.0;
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 
 			m_Petals = 0;
 			StartSpawnTimer( TimeSpan.FromMinutes( 1.0 ) );

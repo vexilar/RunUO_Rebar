@@ -139,7 +139,7 @@ namespace Server.Items
         public StaffCloak() : base()
         {
             StaffLevel= AccessLevel.Administrator;  // assign admin staff level by default
-            LootType = LootType.Blessed;
+            LootType = LootType.Regular;
             Name = "Staff Cloak";
             Weight = 0;
         } 

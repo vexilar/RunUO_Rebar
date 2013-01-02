@@ -168,7 +168,7 @@ namespace Server.Items
 		[Constructable]
 		public StoneAnkhDeed() : base()
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public StoneAnkhDeed( Serial serial ) : base( serial )

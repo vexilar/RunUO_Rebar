@@ -67,7 +67,7 @@ namespace Server.Items
 		[Constructable]
 		public BrokenBookcaseDeed() : base()
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public BrokenBookcaseDeed( Serial serial ) : base( serial )

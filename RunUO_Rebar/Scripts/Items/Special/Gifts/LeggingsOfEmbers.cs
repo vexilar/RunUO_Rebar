@@ -20,7 +20,7 @@ namespace Server.Items
 		public LeggingsOfEmbers()
 		{
 			Hue = 0x2C;
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 
 			ArmorAttributes.SelfRepair = 10;
 			ArmorAttributes.MageArmor = 1;

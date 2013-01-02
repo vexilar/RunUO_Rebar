@@ -140,7 +140,7 @@ namespace Server.Items
 		[Constructable]
 		public SacrificialAltarDeed() : base()
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public SacrificialAltarDeed( Serial serial ) : base( serial )

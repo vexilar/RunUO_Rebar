@@ -105,7 +105,7 @@ namespace Server.Items
 		public Runebook( int maxCharges ) : base( Core.AOS ? 0x22C5 : 0xEFA )
 		{
 			Weight = (Core.SE ? 1.0 : 3.0);
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 			Hue = 0x461;
 
 			Layer = (Core.AOS ? Layer.Invalid : Layer.OneHanded);
@@ -190,7 +190,7 @@ namespace Server.Items
 		{
 			base.Deserialize( reader );
 
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 
 			if( Core.SE && Weight == 3.0 )
 				Weight = 1.0;

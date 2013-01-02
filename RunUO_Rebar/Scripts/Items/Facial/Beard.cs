@@ -25,7 +25,7 @@ namespace Server.Items
 
 		protected Beard( int itemID, int hue ) : base( itemID )
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 			Layer = Layer.FacialHair;
 			Hue = hue;
 		}
@@ -61,7 +61,7 @@ namespace Server.Items
 		public override void Deserialize( GenericReader reader )
 		{
 			base.Deserialize( reader );
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 
 			int version = reader.ReadInt();
 		}

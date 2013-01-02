@@ -33,7 +33,7 @@ namespace Server.Items
 			
 			InvalidateHue();
 		
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 			Weight = 5.0;
 		}
 

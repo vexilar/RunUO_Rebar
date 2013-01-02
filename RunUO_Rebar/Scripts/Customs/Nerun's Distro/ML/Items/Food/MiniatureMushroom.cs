@@ -12,7 +12,7 @@ namespace Server.Items
 			Stackable = true;
 			Weight = 1.0;
 			FillFactor = 1;
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public MiniatureMushroom( Serial serial ) : base( serial )

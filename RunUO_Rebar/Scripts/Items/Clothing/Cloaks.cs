@@ -240,7 +240,7 @@ namespace Server.Items
 		public RewardCloak( int hue, int labelNumber ) : base( 0x1515, hue )
 		{
 			Weight = 5.0;
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 
 			m_LabelNumber = labelNumber;
 		}

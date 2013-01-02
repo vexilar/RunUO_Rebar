@@ -47,7 +47,7 @@ namespace Server.Engines.BulkOrders
 		{
 			Weight = 1.0;
 			Hue = hue; // Blacksmith: 0x44E; Tailoring: 0x483
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 
 			m_AmountMax = amountMax;
 			m_Type = type;
@@ -60,7 +60,7 @@ namespace Server.Engines.BulkOrders
 		public SmallBOD() : base( Core.AOS ? 0x2258 : 0x14EF )
 		{
 			Weight = 1.0;
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public static BulkMaterialType GetRandomMaterial( BulkMaterialType start, double[] chances )

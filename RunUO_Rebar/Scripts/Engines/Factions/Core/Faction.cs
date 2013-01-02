@@ -717,7 +717,7 @@ namespace Server.Factions
 				Item item = (Item)pots[i];
 				IFactionItem fci = (IFactionItem)item;
 
-				if ( fci.FactionItemState != null || item.LootType != LootType.Blessed )
+				if ( fci.FactionItemState != null || item.LootType != LootType.Regular )
 					continue;
 
 				bool isHued = false;

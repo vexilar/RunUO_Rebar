@@ -251,7 +251,7 @@ namespace Server.Items
 				if (m_Blessed && BlessedFor == null)
 				{
 					BlessedFor = from;
-					LootType = LootType.Blessed;
+					LootType = LootType.Regular;
 				}
 
 				if (m_ChargeTime > 0)

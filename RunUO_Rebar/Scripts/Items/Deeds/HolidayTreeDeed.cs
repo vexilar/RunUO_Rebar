@@ -17,7 +17,7 @@ namespace Server.Items
 		{
 			Hue = 0x488;
 			Weight = 1.0;
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public HolidayTreeDeed( Serial serial ) : base( serial )
@@ -37,7 +37,7 @@ namespace Server.Items
 
 			int version = reader.ReadInt();
 
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public bool ValidatePlacement( Mobile from, Point3D loc )

@@ -22,7 +22,7 @@ namespace Server.Items
 		[Constructable]
 		public FurnitureDyeTub()
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public override void OnDoubleClick( Mobile from )
@@ -70,7 +70,7 @@ namespace Server.Items
 			}
 
 			if ( LootType == LootType.Regular )
-				LootType = LootType.Blessed;
+				LootType = LootType.Regular;
 		}
 	}
 }

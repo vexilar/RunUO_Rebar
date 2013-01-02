@@ -21,7 +21,7 @@ namespace Server.Items
 		public GuildTeleporter( Item stone ) : base( 0x1869 )
 		{
 			Weight = 1.0;
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 
 			m_Stone = stone;
 		}
@@ -44,7 +44,7 @@ namespace Server.Items
 		public override void Deserialize( GenericReader reader )
 		{
 			base.Deserialize( reader );
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 
 			int version = reader.ReadInt();
 

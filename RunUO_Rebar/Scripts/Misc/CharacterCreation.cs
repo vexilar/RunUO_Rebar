@@ -1085,7 +1085,7 @@ namespace Server.Misc
 
 					PackItem( book );
 
-					book.LootType = LootType.Blessed;
+					book.LootType = LootType.Regular;
 
 					addSkillItems = false;
 
@@ -1120,7 +1120,7 @@ namespace Server.Misc
 
 					PackItem( book );
 
-					book.LootType = LootType.Blessed;
+					book.LootType = LootType.Regular;
 
 					addSkillItems = false;
 
@@ -1564,7 +1564,7 @@ namespace Server.Misc
 
 					EquipItem( book );
 
-					book.LootType = LootType.Blessed;
+					book.LootType = LootType.Regular;
 
 					if ( elf )
 					{

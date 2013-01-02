@@ -685,7 +685,7 @@ namespace Server.Items
 
 			from.LocalOverheadMessage( MessageType.Regular, 0x3B2, 503019 ); // You successfully decode a treasure map!
 			Decoder = from;
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 			DisplayTo( from );
 		}
 
@@ -889,7 +889,7 @@ namespace Server.Items
 			}
 			if (m_Decoder != null && LootType == LootType.Regular)
 			{
-				LootType = LootType.Blessed;
+				LootType = LootType.Regular;
 			}
 		}
 	}

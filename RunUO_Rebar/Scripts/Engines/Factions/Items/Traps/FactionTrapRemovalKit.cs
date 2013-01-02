@@ -20,7 +20,7 @@ namespace Server.Factions
 		[Constructable]
 		public FactionTrapRemovalKit() : base( 7867 )
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 			m_Charges = 25;
 		}
 

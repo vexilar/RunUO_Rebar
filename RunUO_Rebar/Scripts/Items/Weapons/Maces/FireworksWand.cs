@@ -26,7 +26,7 @@ namespace Server.Items
 		public FireworksWand( int charges )
 		{
 			m_Charges = charges;
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public FireworksWand( Serial serial ) : base( serial )

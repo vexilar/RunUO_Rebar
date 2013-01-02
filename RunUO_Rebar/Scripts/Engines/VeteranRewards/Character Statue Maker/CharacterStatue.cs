@@ -458,7 +458,7 @@ namespace Server.Mobiles
 		{
 			m_Statue = statue;
 		
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 			Weight = 1.0;
 		}
 

@@ -182,7 +182,7 @@ namespace Server.Items
 		{
 			Hue = hue;
 			Weight = 1.0;
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 		}
 
 		public MistletoeDeed( Serial serial ) : base( serial )

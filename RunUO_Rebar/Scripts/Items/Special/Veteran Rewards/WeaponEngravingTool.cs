@@ -42,7 +42,7 @@ namespace Server.Items
 		[Constructable]
 		public WeaponEngravingTool( int uses ) : base( 0x32F8 )
 		{
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 			Weight = 1.0;
 			
 			m_UsesRemaining = uses;

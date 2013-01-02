@@ -53,7 +53,7 @@ namespace Server.Items
 			m_Facet = facet;
 			m_AwardedTo = m;
 
-			LootType = LootType.Blessed;
+			LootType = LootType.Regular;
 			Hue = 0x501;
 		}
 
