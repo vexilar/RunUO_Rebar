@@ -787,8 +787,8 @@ namespace Server.Items
 
 				bonus += AosAttributes.GetValue( attacker, AosAttribute.AttackChance );
 
-				if ( Spells.Chivalry.DivineFurySpell.UnderEffect( attacker ) )
-					bonus += 10; // attacker gets 10% bonus when they're under divine fury
+                //if ( Spells.Chivalry.DivineFurySpell.UnderEffect( attacker ) )
+                //    bonus += 10; // attacker gets 10% bonus when they're under divine fury
 
 				if ( CheckAnimal( attacker, typeof( GreyWolf ) ) || CheckAnimal( attacker, typeof( BakeKitsune ) ) )
 					bonus += 20; // attacker gets 20% bonus when under Wolf or Bake Kitsune form
@@ -814,8 +814,8 @@ namespace Server.Items
 
 				bonus = AosAttributes.GetValue( defender, AosAttribute.DefendChance );
 
-				if ( Spells.Chivalry.DivineFurySpell.UnderEffect( defender ) )
-					bonus -= 20; // defender loses 20% bonus when they're under divine fury
+                //if ( Spells.Chivalry.DivineFurySpell.UnderEffect( defender ) )
+                //    bonus -= 20; // defender loses 20% bonus when they're under divine fury
 
 				if ( HitLower.IsUnderDefenseEffect( defender ) )
 					bonus -= 25; // Under Hit Lower Defense effect -> 25% malus
@@ -885,8 +885,8 @@ namespace Server.Items
 				 */
 				int bonus = AosAttributes.GetValue( m, AosAttribute.WeaponSpeed );
 
-				if ( Spells.Chivalry.DivineFurySpell.UnderEffect( m ) )
-					bonus += 10;
+                //if ( Spells.Chivalry.DivineFurySpell.UnderEffect( m ) )
+                //    bonus += 10;
 
 				// Bonus granted by successful use of Honorable Execution.
 				//bonus += HonorableExecution.GetSwingBonus( m );
@@ -945,8 +945,8 @@ namespace Server.Items
 
 				int bonus = AosAttributes.GetValue( m, AosAttribute.WeaponSpeed );
 
-				if ( Spells.Chivalry.DivineFurySpell.UnderEffect( m ) )
-					bonus += 10;
+                //if ( Spells.Chivalry.DivineFurySpell.UnderEffect( m ) )
+                //    bonus += 10;
 
 				int discordanceEffect = 0;
 
@@ -2220,8 +2220,8 @@ namespace Server.Items
 				damageBonus += 25;
 
 			// Divine Fury gives a +10% bonus to damage.
-			if ( Spells.Chivalry.DivineFurySpell.UnderEffect( attacker ) )
-				damageBonus += 10;
+            //if ( Spells.Chivalry.DivineFurySpell.UnderEffect( attacker ) )
+            //    damageBonus += 10;
 
 			int defenseMasteryMalus = 0;
 

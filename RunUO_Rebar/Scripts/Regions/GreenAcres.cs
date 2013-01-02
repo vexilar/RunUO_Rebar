@@ -6,7 +6,7 @@ using Server.Spells;
 using Server.Spells.Seventh;
 using Server.Spells.Fourth;
 using Server.Spells.Sixth;
-using Server.Spells.Chivalry;
+//using Server.Spells.Chivalry;
 
 namespace Server.Regions
 {
@@ -26,12 +26,12 @@ namespace Server.Regions
 
 		public override bool OnBeginSpellCast( Mobile m, ISpell s )
 		{
-			if ( ( s is GateTravelSpell || s is RecallSpell || s is MarkSpell || s is SacredJourneySpell ) && m.AccessLevel == AccessLevel.Player )
-			{
-				m.SendMessage( "You cannot cast that spell here." );
-				return false;
-			}
-			else
+            //if ( ( s is GateTravelSpell || s is RecallSpell || s is MarkSpell || s is SacredJourneySpell ) && m.AccessLevel == AccessLevel.Player )
+            //{
+            //    m.SendMessage( "You cannot cast that spell here." );
+            //    return false;
+            //}
+            //else;
 			{
 				return base.OnBeginSpellCast( m, s );
 			}
