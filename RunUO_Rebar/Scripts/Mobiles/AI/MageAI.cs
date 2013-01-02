@@ -5,7 +5,7 @@ using Server.Spells;
 using Server.Spells.Fifth;
 using Server.Spells.First;
 using Server.Spells.Fourth;
-using Server.Spells.Necromancy;
+//using Server.Spells.Necromancy;
 using Server.Spells.Second;
 using Server.Spells.Seventh;
 using Server.Spells.Sixth;
@@ -209,39 +209,39 @@ namespace Server.Mobiles
 				OnFailedMove();
 		}
 
-		public virtual bool CanCastNecro()
-		{
-			return ( Utility.RandomBool() && ( m_Mobile is BaseCreature ) && ( (BaseCreature)m_Mobile ).IsNecromancer );
-		}
+        //public virtual bool CanCastNecro()
+        //{
+        //    return ( Utility.RandomBool() && ( m_Mobile is BaseCreature ) && ( (BaseCreature)m_Mobile ).IsNecromancer );
+        //}
 
-		public virtual bool CanCastNecroBias( int bias )
-		{
-			return ( CanCastNecro() && Utility.Random( bias ) == 0 );
-		}
+        //public virtual bool CanCastNecroBias( int bias )
+        //{
+        //    return ( CanCastNecro() && Utility.Random( bias ) == 0 );
+        //}
 
-		public virtual Spell GetRandomDamage()
-		{
-			return ( CanCastNecroBias( 2 ) ) ? GetRandomDamageNecroSpell() : GetRandomDamageSpell();
-		}
+        //public virtual Spell GetRandomDamage();
+        //{
+        //    return ( CanCastNecroBias( 2 ) ) ? GetRandomDamageNecroSpell() : GetRandomDamageSpell();
+        //}
 
-		public virtual Spell GetRandomDamageNecroSpell()
-		{
-			int possibles = 3;
+        //public virtual Spell GetRandomDamageNecroSpell()
+        //{
+        //    int possibles = 3;
 
-			if( myNecro >= 100 )
-			{
-				possibles = 5;
-			}
-			switch( Utility.Random( possibles ) )
-			{
-				default: m_Mobile.DebugSay( "Vengeful Spirit" ); return new VengefulSpiritSpell( m_Mobile, null );
+        //    if( myNecro >= 100 )
+        //    {
+        //        possibles = 5;
+        //    }
+            //switch( Utility.Random( possibles ) )
+            //{
+            //    default: m_Mobile.DebugSay( "Vengeful Spirit" ); return new VengefulSpiritSpell( m_Mobile, null );
 
-				case 0: m_Mobile.DebugSay( "Pain Spike" ); return new PainSpikeSpell( m_Mobile, null );
-				case 1: m_Mobile.DebugSay( "Poison Strike" ); return new PoisonStrikeSpell( m_Mobile, null );
-				case 2: m_Mobile.DebugSay( "Strangle" ); return new StrangleSpell( m_Mobile, null );
-				case 3: m_Mobile.DebugSay( "Wither" ); return new WitherSpell( m_Mobile, null );
-			}
-		}
+            //    case 0: m_Mobile.DebugSay( "Pain Spike" ); return new PainSpikeSpell( m_Mobile, null );
+            //    case 1: m_Mobile.DebugSay( "Poison Strike" ); return new PoisonStrikeSpell( m_Mobile, null );
+            //    case 2: m_Mobile.DebugSay( "Strangle" ); return new StrangleSpell( m_Mobile, null );
+            //    case 3: m_Mobile.DebugSay( "Wither" ); return new WitherSpell( m_Mobile, null );
+            //}
+		//}
 
 		public virtual Spell GetRandomDamageSpell()
 		{
@@ -268,22 +268,22 @@ namespace Server.Mobiles
 			}
 		}
 
-		public virtual Spell GetRandomCurse()
-		{
-			return ( CanCastNecro() ) ?  GetRandomNecroCurseSpell() :  GetRandomCurseSpell();
-		}
+        //public virtual Spell GetRandomCurse()
+        //{
+        //    return ( CanCastNecro() ) ?  GetRandomNecroCurseSpell() :  GetRandomCurseSpell();
+        //}
 
-		public virtual Spell GetRandomNecroCurseSpell()
-		{
-			switch( Utility.Random( 4 ) )
-			{
-				default:
-				case 0: m_Mobile.DebugSay( "Blood Oath" ); return new BloodOathSpell( m_Mobile, null );
-				case 1: m_Mobile.DebugSay( "Corpse Skin" ); return new CorpseSkinSpell( m_Mobile, null );
-				case 2: m_Mobile.DebugSay( "Evil Omen" ); return new EvilOmenSpell( m_Mobile, null );
-				case 3: m_Mobile.DebugSay( "Mind Rot" ); return new MindRotSpell( m_Mobile, null );
-			}
-		}
+        //public virtual Spell GetRandomNecroCurseSpell()
+        //{
+            //switch( Utility.Random( 4 ) )
+            //{
+            //    default:
+            //    case 0: m_Mobile.DebugSay( "Blood Oath" ); return new BloodOathSpell( m_Mobile, null );
+            //    case 1: m_Mobile.DebugSay( "Corpse Skin" ); return new CorpseSkinSpell( m_Mobile, null );
+            //    case 2: m_Mobile.DebugSay( "Evil Omen" ); return new EvilOmenSpell( m_Mobile, null );
+            //    case 3: m_Mobile.DebugSay( "Mind Rot" ); return new MindRotSpell( m_Mobile, null );
+            //}
+        //}
 
 		public virtual Spell GetRandomCurseSpell()
 		{
@@ -377,13 +377,13 @@ namespace Server.Mobiles
 							break;
 						}
 					case 3:
-					case 4: // Curse them.
-						{
-							//m_Mobile.DebugSay( "Attempting to curse" );
+                    //case 4: // Curse them.
+                    //    {
+                    //        //m_Mobile.DebugSay( "Attempting to curse" );
 
-							spell = GetRandomCurse();
-							break;
-						}
+                    //        spell = GetRandomCurse();
+                    //        break;
+                    //    }
 					case 5:	// Paralyze them.
 						{
 							//m_Mobile.DebugSay( "Attempting to paralyze" );
@@ -412,13 +412,13 @@ namespace Server.Mobiles
 							break;
 						}
 
-					default: // Damage them.
-						{
-							//m_Mobile.DebugSay( "Just doing damage" );
+                    //default: // Damage them.
+                    //    {
+                    //        //m_Mobile.DebugSay( "Just doing damage" );
 
-							spell = GetRandomDamage();
-							break;
-						}
+                    //        spell = GetRandomDamage();
+                    //        break;
+                    //    }
 				}
 
 				return spell;

@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 using Server.Mobiles;
-using Server.Spells.Necromancy;
+//using Server.Spells.Necromancy;
 using Server.Network;
 using Server.Spells;
 
@@ -30,12 +30,12 @@ namespace Server.Items
 			// Necromancers under Lich or Wraith Form are immune to Bleed Attacks.
 			TransformContext context = TransformationSpellHelper.GetContext( defender );
 
-			if ( (context != null && ( context.Type == typeof( LichFormSpell ) || context.Type == typeof( WraithFormSpell ))) ||
-				(defender is BaseCreature && ((BaseCreature)defender).BleedImmune) )
-			{
-				attacker.SendLocalizedMessage( 1062052 ); // Your target is not affected by the bleed attack!
-				return;
-			}
+            //if ( (context != null && ( context.Type == typeof( LichFormSpell ) || context.Type == typeof( WraithFormSpell ))) ||
+            //    (defender is BaseCreature && ((BaseCreature)defender).BleedImmune) )
+            //{
+            //    attacker.SendLocalizedMessage( 1062052 ); // Your target is not affected by the bleed attack!
+            //    return;
+            //}
 
 			attacker.SendLocalizedMessage( 1060159 ); // Your target is bleeding!
 			defender.SendLocalizedMessage( 1060160 ); // You are bleeding!

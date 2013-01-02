@@ -42,13 +42,13 @@ namespace Server.SkillHandlers
 
 		public static bool CheckMastery( Mobile tamer, BaseCreature creature )
 		{
-			BaseCreature familiar = (BaseCreature)Spells.Necromancy.SummonFamiliarSpell.Table[tamer];
+            //BaseCreature familiar = (BaseCreature)Spells.Necromancy.SummonFamiliarSpell.Table[tamer];
 
-			if ( familiar != null && !familiar.Deleted && familiar is DarkWolfFamiliar )
-			{
-				if ( creature is DireWolf || creature is GreyWolf || creature is TimberWolf || creature is WhiteWolf || creature is BakeKitsune )
-					return true;
-			}
+            //if ( familiar != null && !familiar.Deleted && familiar is DarkWolfFamiliar )
+            //{
+            //    if ( creature is DireWolf || creature is GreyWolf || creature is TimberWolf || creature is WhiteWolf || creature is BakeKitsune )
+            //        return true;
+            //}
 
 			return false;
 		}

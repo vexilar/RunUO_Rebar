@@ -8,7 +8,7 @@ using Server.Multis;
 using Server.Mobiles;
 using Server.Engines.PartySystem;
 using Server.Factions;
-using Server.Spells.Necromancy;
+//using Server.Spells.Necromancy;
 using Server.Spells.Ninjitsu;
 using Server.Spells;
 

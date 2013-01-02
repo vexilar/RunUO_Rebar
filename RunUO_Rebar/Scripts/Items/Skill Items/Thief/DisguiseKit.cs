@@ -5,7 +5,7 @@ using Server.Gumps;
 using Server.Spells;
 using Server.Spells.Fifth;
 using Server.Spells.Seventh;
-using Server.Spells.Necromancy;
+//using Server.Spells.Necromancy;
 using Server.Mobiles;
 using Server.Network;
 using Server.SkillHandlers;

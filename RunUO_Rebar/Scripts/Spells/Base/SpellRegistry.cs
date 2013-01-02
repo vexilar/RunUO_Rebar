@@ -4,7 +4,7 @@ using System.IO;
 //using Server.Spells.Bushido;
 //using Server.Spells.Chivalry;
 using Server.Items;
-using Server.Spells.Necromancy;
+//using Server.Spells.Necromancy;
 using Server.Spells.Ninjitsu;
 
 namespace Server.Spells
