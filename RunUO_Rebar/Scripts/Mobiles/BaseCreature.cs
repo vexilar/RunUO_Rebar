@@ -12,7 +12,7 @@ using Server.ContextMenus;
 using Server.Engines.Quests;
 using Server.Engines.PartySystem;
 using Server.Factions;
-using Server.Spells.Bushido;
+//using Server.Spells.Bushido;
 using Server.Spells.Spellweaving;
 using Server.Spells.Necromancy;
 
@@ -619,8 +619,8 @@ namespace Server.Mobiles
 			int poisDamage = BreathPoisonDamage;
 			int nrgyDamage = BreathEnergyDamage;
 
-			if( Evasion.CheckSpellEvasion( target ) )
-				return;
+			//if( Evasion.CheckSpellEvasion( target ) )
+			//	return;
 
 			if ( physDamage == 0 && fireDamage == 0 && coldDamage == 0 && poisDamage == 0 && nrgyDamage == 0 )
 			{ // Unresistable damage even in AOS
@@ -1287,8 +1287,8 @@ namespace Server.Mobiles
 					c.Slip();
 			}
 
-			if( Confidence.IsRegenerating( this ) )
-				Confidence.StopRegenerating( this );
+			//if( Confidence.IsRegenerating( this ) )
+			//	Confidence.StopRegenerating( this );
 
 			WeightOverloading.FatigueOnDamage( this, amount );
 

@@ -13,7 +13,7 @@ using Server.Spells.Fifth;
 using Server.Spells.Seventh;
 using Server.Spells.Necromancy;
 using Server.Spells.Ninjitsu;
-using Server.Spells.Bushido;
+//using Server.Spells.Bushido;
 using Server.Targeting;
 using Server.Engines.Quests;
 using Server.Factions;
@@ -738,13 +738,13 @@ namespace Server.Mobiles
         public override void OnManaChange(int oldValue)
         {
             base.OnManaChange(oldValue);
-            if (m_ExecutesLightningStrike > 0)
-            {
-                if (Mana < m_ExecutesLightningStrike)
-                {
-                    LightningStrike.ClearCurrentMove(this);
-                }
-            }
+            //if (m_ExecutesLightningStrike > 0)
+            //{
+            //    if (Mana < m_ExecutesLightningStrike)
+            //    {
+            //        LightningStrike.ClearCurrentMove(this);
+            //    }
+            //}
         }
 
         private static void OnLogin(LoginEventArgs e)
@@ -2055,8 +2055,8 @@ namespace Server.Mobiles
                     c.Slip();
             }
 
-            if (Confidence.IsRegenerating(this))
-                Confidence.StopRegenerating(this);
+            //if (Confidence.IsRegenerating(this))
+            //    Confidence.StopRegenerating(this);
 
             WeightOverloading.FatigueOnDamage(this, amount);
 
