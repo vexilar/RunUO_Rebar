@@ -12,7 +12,7 @@ namespace Server.Gumps
 	{
 		private Mobile m_Mobile;
 		private BaseHouse m_House;
-		private TempNoHousingRegion m_Temp; 
+		//private TempNoHousingRegion m_Temp; 
 
 		public ConfirmHouseResize( Mobile mobile, BaseHouse house ) : base( 110, 100 )
 		{

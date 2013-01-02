@@ -1,6 +1,6 @@
 using System;
 using Server;
-using Server.Spells.Spellweaving;
+//using Server.Spells.Spellweaving;
 
 namespace Server.Items
 {
@@ -18,7 +18,7 @@ namespace Server.Items
 		{
 			damage = base.AbsorbDamage( attacker, defender, damage );
 
-			AttuneWeaponSpell.TryAbsorb( defender, ref damage );
+			//AttuneWeaponSpell.TryAbsorb( defender, ref damage );
 
 			if ( Core.AOS )
 				return damage;

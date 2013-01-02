@@ -11,7 +11,7 @@ using Server.Spells;
 using Server.Factions;
 using Server.Engines.Craft;
 using System.Collections.Generic;
-using Server.Spells.Spellweaving;
+//using Server.Spells.Spellweaving;
 
 namespace Server.Items
 {
@@ -899,8 +899,8 @@ namespace Server.Items
 
 				TransformContext context = TransformationSpellHelper.GetContext( m );
 
-				if( context != null && context.Spell is ReaperFormSpell )
-					bonus += ((ReaperFormSpell)context.Spell).SwingSpeedBonus;
+                //if( context != null && context.Spell is ReaperFormSpell )
+                //    bonus += ((ReaperFormSpell)context.Spell).SwingSpeedBonus;
 
 				int discordanceEffect = 0;
 
@@ -908,8 +908,8 @@ namespace Server.Items
 				if ( SkillHandlers.Discordance.GetEffect( m, ref discordanceEffect ) )
 					bonus -= discordanceEffect;
 
-				if( EssenceOfWindSpell.IsDebuffed( m ) )
-					bonus -= EssenceOfWindSpell.GetSSIMalus( m );
+                //if( EssenceOfWindSpell.IsDebuffed( m ) )
+                //    bonus -= EssenceOfWindSpell.GetSSIMalus( m );
 
 				if ( bonus > 60 )
 					bonus = 60;
@@ -1777,8 +1777,8 @@ namespace Server.Items
 
 				TransformContext context = TransformationSpellHelper.GetContext( attacker );
 
-				if( context != null && context.Spell is ReaperFormSpell )
-					damageBonus += ((ReaperFormSpell)context.Spell).SpellDamageBonus;
+                //if( context != null && context.Spell is ReaperFormSpell )
+                //    damageBonus += ((ReaperFormSpell)context.Spell).SpellDamageBonus;
 			}
 
 			damage = AOS.Scale( damage, 100 + damageBonus );

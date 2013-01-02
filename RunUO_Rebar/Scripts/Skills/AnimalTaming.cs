@@ -6,7 +6,7 @@ using Server.Network;
 using Server.Mobiles;
 using Server.Factions;
 using Server.Spells;
-using Server.Spells.Spellweaving;
+//using Server.Spells.Spellweaving;
 
 namespace Server.SkillHandlers
 {
@@ -205,8 +205,8 @@ namespace Server.SkillHandlers
 
 								creature.Move( creature.Direction );
 
-								if ( from is PlayerMobile && !(( (PlayerMobile)from ).HonorActive || TransformationSpellHelper.UnderTransformation( from, typeof( EtherealVoyageSpell ))))
-									creature.Combatant = from;
+                                //if ( from is PlayerMobile && !(( (PlayerMobile)from ).HonorActive || TransformationSpellHelper.UnderTransformation( from, typeof( EtherealVoyageSpell ))))
+                                //    creature.Combatant = from;
 							}
 							else
 							{

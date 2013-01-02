@@ -65,7 +65,7 @@ namespace Server.Items
 		}
 
 		private AosElementAttribute m_Attribute;
-		private LootType m_LootType;
+        //private LootType m_LootType;
 
 		[Constructable]
 		public EarringsOfProtection() : this( RandomType() )

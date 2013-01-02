@@ -13,7 +13,7 @@ using Server.Engines.Quests;
 using Server.Engines.Quests.Necro;
 using MoveImpl=Server.Movement.MovementImpl;
 using Server.Spells;
-using Server.Spells.Spellweaving;
+//using Server.Spells.Spellweaving;
 
 namespace Server.Mobiles
 {
@@ -2654,8 +2654,8 @@ namespace Server.Mobiles
 						continue;
 
 					//Ignore anyone under EtherealVoyage
-					if( TransformationSpellHelper.UnderTransformation( m, typeof( EtherealVoyageSpell ) ) )
-						continue;
+                    //if( TransformationSpellHelper.UnderTransformation( m, typeof( EtherealVoyageSpell ) ) )
+                    //    continue;
 
 					// Ignore players with activated honor
 					if ( m is PlayerMobile && ( (PlayerMobile)m ).HonorActive && !( m_Mobile.Combatant == m ))
