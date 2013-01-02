@@ -133,19 +133,19 @@ namespace Server.Spells
                     //Register( 405, typeof( Bushido.MomentumStrike ) );
 
 					// Ninja abilities
-					Register( 500, typeof( Ninjitsu.FocusAttack ) );
-					Register( 501, typeof( Ninjitsu.DeathStrike ) );
-					Register( 502, typeof( Ninjitsu.AnimalForm ) );
-					Register( 503, typeof( Ninjitsu.KiAttack ) );
-					Register( 504, typeof( Ninjitsu.SurpriseAttack ) );
-					Register( 505, typeof( Ninjitsu.Backstab ) );
-					Register( 506, typeof( Ninjitsu.Shadowjump ) );
-					Register( 507, typeof( Ninjitsu.MirrorImage ) );
+                    //Register( 500, typeof( Ninjitsu.FocusAttack ) );
+                    //Register( 501, typeof( Ninjitsu.DeathStrike ) );
+                    //Register( 502, typeof( Ninjitsu.AnimalForm ) );
+                    //Register( 503, typeof( Ninjitsu.KiAttack ) );
+                    //Register( 504, typeof( Ninjitsu.SurpriseAttack ) );
+                    //Register( 505, typeof( Ninjitsu.Backstab ) );
+                    //Register( 506, typeof( Ninjitsu.Shadowjump ) );
+                    //Register( 507, typeof( Ninjitsu.MirrorImage ) );
 				}
 
 				if( Core.ML )
 				{
-					Register( 600, typeof( Spellweaving.ArcaneCircleSpell ) );
+					//Register( 600, typeof( Spellweaving.ArcaneCircleSpell ) );
 					Register( 601, typeof( Spellweaving.GiftOfRenewalSpell ) );
 					//Register( 602, typeof( Spellweaving.ImmolatingWeaponSpell ) );
 					Register( 603, typeof( Spellweaving.AttuneWeaponSpell ) );

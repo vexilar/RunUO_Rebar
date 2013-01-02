@@ -5,7 +5,7 @@ using Server.Targeting;
 using Server.Mobiles;
 using Server.Spells.Second;
 //using Server.Spells.Necromancy;
-using Server.Spells.Ninjitsu;
+//using Server.Spells.Ninjitsu;
 using System.Collections.Generic;
 using Server.Spells.Spellweaving;
 //using Server.Spells.Bushido;

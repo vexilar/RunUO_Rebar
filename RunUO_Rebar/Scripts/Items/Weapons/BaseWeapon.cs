@@ -7,7 +7,7 @@ using Server.Mobiles;
 using Server.Spells;
 //using Server.Spells.Necromancy;
 //using Server.Spells.Bushido;
-using Server.Spells.Ninjitsu;
+//using Server.Spells.Ninjitsu;
 using Server.Factions;
 using Server.Engines.Craft;
 using System.Collections.Generic;
@@ -757,10 +757,10 @@ namespace Server.Items
 			return defender.Skills[GetUsedSkill( defender, true )].Value;
 		}
 
-		private static bool CheckAnimal( Mobile m, Type type )
-		{
-			return AnimalForm.UnderTransformation( m, type );
-		}
+        //private static bool CheckAnimal( Mobile m, Type type )
+        //{
+        //    return AnimalForm.UnderTransformation( m, type );
+        //}
 
 		public virtual bool CheckHit( Mobile attacker, Mobile defender )
 		{
@@ -790,8 +790,8 @@ namespace Server.Items
                 //if ( Spells.Chivalry.DivineFurySpell.UnderEffect( attacker ) )
                 //    bonus += 10; // attacker gets 10% bonus when they're under divine fury
 
-				if ( CheckAnimal( attacker, typeof( GreyWolf ) ) || CheckAnimal( attacker, typeof( BakeKitsune ) ) )
-					bonus += 20; // attacker gets 20% bonus when under Wolf or Bake Kitsune form
+                //if ( CheckAnimal( attacker, typeof( GreyWolf ) ) || CheckAnimal( attacker, typeof( BakeKitsune ) ) )
+                //    bonus += 20; // attacker gets 20% bonus when under Wolf or Bake Kitsune form
 
 				if ( HitLower.IsUnderAttackEffect( attacker ) )
 					bonus -= 25; // Under Hit Lower Attack effect -> 25% malus
@@ -825,10 +825,10 @@ namespace Server.Items
 				if ( Block.GetBonus( defender, ref blockBonus ) )
 					bonus += blockBonus;
 
-				int surpriseMalus = 0;
+                //int surpriseMalus = 0;
 
-				if ( SurpriseAttack.GetMalus( defender, ref surpriseMalus ) )
-					bonus -= surpriseMalus;
+                //if ( SurpriseAttack.GetMalus( defender, ref surpriseMalus ) )
+                //    bonus -= surpriseMalus;
 
 				int discordanceEffect = 0;
 
@@ -1349,30 +1349,30 @@ namespace Server.Items
 
 		public virtual void OnHit( Mobile attacker, Mobile defender, double damageBonus )
 		{
-			if ( MirrorImage.HasClone( defender ) && (defender.Skills.Ninjitsu.Value / 150.0) > Utility.RandomDouble() )
-			{
-				Clone bc;
+            //if ( MirrorImage.HasClone( defender ) && (defender.Skills.Ninjitsu.Value / 150.0) > Utility.RandomDouble() )
+            //{
+            //    Clone bc;
 
-				foreach ( Mobile m in defender.GetMobilesInRange( 4 ) )
-				{
-					bc = m as Clone;
+            //    foreach ( Mobile m in defender.GetMobilesInRange( 4 ) )
+            //    {
+            //        bc = m as Clone;
 
-					if ( bc != null && bc.Summoned && bc.SummonMaster == defender )
-					{
-						attacker.SendLocalizedMessage( 1063141 ); // Your attack has been diverted to a nearby mirror image of your target!
-						defender.SendLocalizedMessage( 1063140 ); // You manage to divert the attack onto one of your nearby mirror images.
+            //        if ( bc != null && bc.Summoned && bc.SummonMaster == defender )
+            //        {
+            //            attacker.SendLocalizedMessage( 1063141 ); // Your attack has been diverted to a nearby mirror image of your target!
+            //            defender.SendLocalizedMessage( 1063140 ); // You manage to divert the attack onto one of your nearby mirror images.
 
-						/*
-						 * TODO: What happens if the Clone parries a blow?
-						 * And what about if the attacker is using Honorable Execution
-						 * and kills it?
-						 */
+            //            /*
+            //             * TODO: What happens if the Clone parries a blow?
+            //             * And what about if the attacker is using Honorable Execution
+            //             * and kills it?
+            //             */
 
-						defender = m;
-						break;
-					}
-				}
-			}
+            //            defender = m;
+            //            break;
+            //        }
+            //    }
+            //}
 
 			PlaySwingAnimation( attacker );
 			PlayHurtAnimation( defender );
@@ -1744,14 +1744,14 @@ namespace Server.Items
 			if ( defender is IHonorTarget && ((IHonorTarget)defender).ReceivedHonorContext != null )
 				((IHonorTarget)defender).ReceivedHonorContext.OnTargetHit( attacker );
 
-			if ( !(this is BaseRanged) )
-			{
-				if ( AnimalForm.UnderTransformation( attacker, typeof( GiantSerpent ) ) )
-					defender.ApplyPoison( attacker, Poison.Lesser );
+            //if ( !(this is BaseRanged) )
+            //{
+            //    if ( AnimalForm.UnderTransformation( attacker, typeof( GiantSerpent ) ) )
+            //        defender.ApplyPoison( attacker, Poison.Lesser );
 
-				if ( AnimalForm.UnderTransformation( defender, typeof( BullFrog ) ) )
-					attacker.ApplyPoison( defender, Poison.Regular );
-			}
+            //    if ( AnimalForm.UnderTransformation( defender, typeof( BullFrog ) ) )
+            //        attacker.ApplyPoison( defender, Poison.Regular );
+            //}
 		}
 
 		public virtual double GetAosDamage( Mobile attacker, int bonus, int dice, int sides )
