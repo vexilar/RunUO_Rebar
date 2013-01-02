@@ -57,8 +57,8 @@ namespace Server.Items
 						if( CraftResources.GetType( ( (BaseArmor)i ).Resource ) == CraftResourceType.Metal )
 						return true;
 					}
-					if( i is DragonBardingDeed )
-						return true;
+                    //if( i is DragonBardingDeed )
+                    //    return true;
 				}
 			}
 			return false;
@@ -128,18 +128,18 @@ namespace Server.Items
                 Type resourceType = info.ResourceTypes[ 0 ];
                 Item ingot = (Item)Activator.CreateInstance( resourceType );
 
-                if( item is DragonBardingDeed || ( item is BaseArmor && ( (BaseArmor)item ).PlayerConstructed ) || ( item is BaseWeapon && ( (BaseWeapon)item ).PlayerConstructed ) || ( item is BaseClothing && ( (BaseClothing)item ).PlayerConstructed ) )
-					{
-						double mining = from.Skills[ SkillName.Mining ].Value;
-						if( mining > 100.0 )
-							mining = 100.0;
-						double amount = ( ( ( 4 + mining ) * craftResource.Amount - 4 ) * 0.0068 );
-						if( amount < 2 )
-							ingot.Amount = 2;
-						else
-						ingot.Amount = (int)amount;
-					}
-                else
+                //if( item is DragonBardingDeed || ( item is BaseArmor && ( (BaseArmor)item ).PlayerConstructed ) || ( item is BaseWeapon && ( (BaseWeapon)item ).PlayerConstructed ) || ( item is BaseClothing && ( (BaseClothing)item ).PlayerConstructed ) )
+                //    {
+                //        double mining = from.Skills[ SkillName.Mining ].Value;
+                //        if( mining > 100.0 )
+                //            mining = 100.0;
+                //        double amount = ( ( ( 4 + mining ) * craftResource.Amount - 4 ) * 0.0068 );
+                //        if( amount < 2 )
+                //            ingot.Amount = 2;
+                //        else
+                //        ingot.Amount = (int)amount;
+                //    }
+                //else
 				{
                     ingot.Amount = 2;
 				}
@@ -220,14 +220,14 @@ namespace Server.Items
 					else
 						notSalvaged++;
 				}
-				else if( item is DragonBardingDeed )
-				{
-					if( Resmelt( from, item, ( (DragonBardingDeed)item ).Resource ) )
-						salvaged++;
+                //else if( item is DragonBardingDeed )
+                //{
+                //    if( Resmelt( from, item, ( (DragonBardingDeed)item ).Resource ) )
+                //        salvaged++;
 
-					else
-						notSalvaged++;
-				}	
+                //    else
+                //        notSalvaged++;
+                //}	
 			}
 			if( m_Failure )
 			{

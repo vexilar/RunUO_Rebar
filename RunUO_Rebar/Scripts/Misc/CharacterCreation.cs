@@ -689,12 +689,12 @@ namespace Server.Misc
 			if( TestCenter.Enabled )
 				FillBankbox( newChar );
 
-			if ( young )
-			{
-				NewPlayerTicket ticket = new NewPlayerTicket();
-				ticket.Owner = newChar;
-				newChar.BankBox.DropItem( ticket );
-			}
+            //if ( young )
+            //{
+            //    //NewPlayerTicket ticket = new NewPlayerTicket();
+            //    ticket.Owner = newChar;
+            //    newChar.BankBox.DropItem( ticket );
+            //}
 
 			//CityInfo city = GetStartLocation( args, young );
 			CityInfo city = new CityInfo( "Britain", "Sweet Dreams Inn", 1496, 1628, 10, Map.Felucca);
