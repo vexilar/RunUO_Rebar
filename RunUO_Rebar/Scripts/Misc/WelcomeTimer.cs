@@ -27,7 +27,7 @@ namespace Server.Misc
 				} :
 			new string[]
 				{	//Yes, this message is a pathetic message, It's suggested that you change it.
-					"Welcome to Rebar!  Reccomended Client Version 4.x.x.  Please check out our website at https://github.com/vexilar/UoRebar_Website.",
+					"Welcome to Rebar!  Reccomended Client Version 4.x.x.  Please check out our website at http://www.uorebar.com.",
 					"This is a brand new shard where suggestions will be taken seriously.  Please contact the admins with suggestions at DevShro@hotmail.com."
 				} );
 
