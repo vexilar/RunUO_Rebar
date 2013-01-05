@@ -111,16 +111,16 @@ namespace Server.Spells
 					Register( 116, typeof( Necromancy.ExorcismSpell ) );
 
 				// Paladin abilities
-                //Register( 200, typeof( Chivalry.CleanseByFireSpell ) );
-                //Register( 201, typeof( Chivalry.CloseWoundsSpell ) );
-                //Register( 202, typeof( Chivalry.ConsecrateWeaponSpell ) );
-                //Register( 203, typeof( Chivalry.DispelEvilSpell ) );
-                //Register( 204, typeof( Chivalry.DivineFurySpell ) );
-                //Register( 205, typeof( Chivalry.EnemyOfOneSpell ) );
-                //Register( 206, typeof( Chivalry.HolyLightSpell ) );
-                //Register( 207, typeof( Chivalry.NobleSacrificeSpell ) );
-                //Register( 208, typeof( Chivalry.RemoveCurseSpell ) );
-                //Register( 209, typeof( Chivalry.SacredJourneySpell ) );
+				Register( 200, typeof( Chivalry.CleanseByFireSpell ) );
+				Register( 201, typeof( Chivalry.CloseWoundsSpell ) );
+				Register( 202, typeof( Chivalry.ConsecrateWeaponSpell ) );
+				Register( 203, typeof( Chivalry.DispelEvilSpell ) );
+				Register( 204, typeof( Chivalry.DivineFurySpell ) );
+				Register( 205, typeof( Chivalry.EnemyOfOneSpell ) );
+				Register( 206, typeof( Chivalry.HolyLightSpell ) );
+				Register( 207, typeof( Chivalry.NobleSacrificeSpell ) );
+				Register( 208, typeof( Chivalry.RemoveCurseSpell ) );
+				Register( 209, typeof( Chivalry.SacredJourneySpell ) );
 
 				if ( Core.SE )
 				{

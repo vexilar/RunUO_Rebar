@@ -214,10 +214,10 @@ namespace Server.Items
 				defSkillValue = -19.9;
 			}
 
-            //if (Spells.Chivalry.DivineFurySpell.UnderEffect(attacker))
-            //{
-            //    attackValue += 10;
-            //}
+			if (Spells.Chivalry.DivineFurySpell.UnderEffect(attacker))
+			{
+				attackValue += 10;
+			}
 
 			if (AnimalForm.UnderTransformation(attacker, typeof(GreyWolf)) || AnimalForm.UnderTransformation(attacker, typeof(BakeKitsune)))
 			{
@@ -238,10 +238,10 @@ namespace Server.Items
 
 			double defenseValue = AosAttributes.GetValue(defender, AosAttribute.DefendChance);
 
-            //if (Spells.Chivalry.DivineFurySpell.UnderEffect(defender))
-            //{
-            //    defenseValue -= 20;
-            //}
+			if (Spells.Chivalry.DivineFurySpell.UnderEffect(defender))
+			{
+				defenseValue -= 20;
+			}
 
 			if (HitLower.IsUnderDefenseEffect(defender))
 			{

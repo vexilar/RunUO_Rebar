@@ -7,7 +7,7 @@ using Server.Network;
 using Server.Spells;
 using Server.Spells.Fourth;
 using Server.Spells.Seventh;
-//using Server.Spells.Chivalry;
+using Server.Spells.Chivalry;
 using Server.Prompts;
 
 namespace Server.Gumps
@@ -425,8 +425,8 @@ namespace Server.Gumps
 										from.SendMessage( location );
 									}
 
-                                    //m_Book.OnTravel();
-                                    //new SacredJourneySpell( from, null, e, null ).Cast();
+									m_Book.OnTravel();
+									new SacredJourneySpell( from, null, e, null ).Cast();
 								}
 								else
 								{
