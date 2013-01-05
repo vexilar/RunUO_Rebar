@@ -4,7 +4,7 @@ using Server;
 using Server.Items;
 using Server.Mobiles;
 using Server.Network;
-//using Server.Spells.Ninjitsu;
+using Server.Spells.Ninjitsu;
 //using Server.Spells.Bushido;
 
 namespace Server.Spells
@@ -151,11 +151,11 @@ namespace Server.Spells
             //    return false;
             //}
 
-            //if ( Ninjitsu.AnimalForm.UnderTransformation( from ) )
-            //{
-            //    from.SendLocalizedMessage( 1063024 ); // You cannot perform this special move right now.
-            //    return false;
-            //}
+			if ( Ninjitsu.AnimalForm.UnderTransformation( from ) )
+			{
+				from.SendLocalizedMessage( 1063024 ); // You cannot perform this special move right now.
+				return false;
+			}
 
 			return CheckSkills( from ) && CheckMana( from, false );
 		}

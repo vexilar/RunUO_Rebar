@@ -10,7 +10,7 @@ using Server.Spells.Seventh;
 using Server.Spells.Fifth;
 //using Server.Spells.Necromancy;
 using Server.Spells;
-//using Server.Spells.Ninjitsu;
+using Server.Spells.Ninjitsu;
 
 namespace Server.SkillHandlers
 {
@@ -117,10 +117,10 @@ namespace Server.SkillHandlers
 						{
 							m_Thief.SendLocalizedMessage( 1061622 ); // You cannot steal the sigil while in that form.
 						}
-                        //else if ( AnimalForm.UnderTransformation( m_Thief ) )
-                        //{
-                        //    m_Thief.SendLocalizedMessage( 1063222 ); // You cannot steal the sigil while mimicking an animal.
-                        //}
+						else if ( AnimalForm.UnderTransformation( m_Thief ) )
+						{
+							m_Thief.SendLocalizedMessage( 1063222 ); // You cannot steal the sigil while mimicking an animal.
+						}
 						else if ( pl.IsLeaving )
 						{
 							m_Thief.SendLocalizedMessage( 1005589 ); // You are currently quitting a faction and cannot steal the town sigil

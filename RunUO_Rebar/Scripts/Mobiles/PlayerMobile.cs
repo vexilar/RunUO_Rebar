@@ -12,7 +12,7 @@ using Server.Spells;
 using Server.Spells.Fifth;
 using Server.Spells.Seventh;
 //using Server.Spells.Necromancy;
-//using Server.Spells.Ninjitsu;
+using Server.Spells.Ninjitsu;
 //using Server.Spells.Bushido;
 using Server.Targeting;
 using Server.Engines.Quests;
@@ -1266,8 +1266,8 @@ namespace Server.Mobiles
                     if (Core.ML && strOffs > 25 && AccessLevel <= AccessLevel.Player)
                         strOffs = 25;
 
-                    //if (AnimalForm.UnderTransformation(this, typeof(BakeKitsune)) || AnimalForm.UnderTransformation(this, typeof(GreyWolf)))
-                    //    strOffs += 20;
+                    if (AnimalForm.UnderTransformation(this, typeof(BakeKitsune)) || AnimalForm.UnderTransformation(this, typeof(GreyWolf)))
+                        strOffs += 20;
                 }
                 else
                 {
@@ -1421,17 +1421,17 @@ namespace Server.Mobiles
 
         public override bool AllowSkillUse(SkillName skill)
         {
-            //if (AnimalForm.UnderTransformation(this))
-            //{
-            //    for (int i = 0; i < m_AnimalFormRestrictedSkills.Length; i++)
-            //    {
-            //        if (m_AnimalFormRestrictedSkills[i] == skill)
-            //        {
-            //            SendLocalizedMessage(1070771); // You cannot use that skill in this form.
-            //            return false;
-            //        }
-            //    }
-            //}
+            if (AnimalForm.UnderTransformation(this))
+            {
+                for (int i = 0; i < m_AnimalFormRestrictedSkills.Length; i++)
+                {
+                    if (m_AnimalFormRestrictedSkills[i] == skill)
+                    {
+                        SendLocalizedMessage(1070771); // You cannot use that skill in this form.
+                        return false;
+                    }
+                }
+            }
 
             return DesignContext.Check(this);
         }
@@ -3508,10 +3508,10 @@ namespace Server.Mobiles
 
             bool onHorse = (this.Mount != null);
 
-            //AnimalFormContext animalContext = AnimalForm.GetContext(this);
+            AnimalFormContext animalContext = AnimalForm.GetContext(this);
 
-            //if (onHorse || (animalContext != null && animalContext.SpeedBoost))
-            //    return (running ? Mobile.RunMount : Mobile.WalkMount);
+            if (onHorse || (animalContext != null && animalContext.SpeedBoost))
+                return (running ? Mobile.RunMount : Mobile.WalkMount);
 
             return (running ? Mobile.RunFoot : Mobile.WalkFoot);
         }

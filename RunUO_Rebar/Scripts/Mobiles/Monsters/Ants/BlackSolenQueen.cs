@@ -49,8 +49,8 @@ namespace Server.Mobiles
 
 			PackItem( new ZoogiFungus( ( Utility.RandomDouble() > 0.05 )? 5 : 25 ) );
 
-            //if ( Utility.RandomDouble() < 0.05 )
-            //    PackItem( new BallOfSummoning() );
+			if ( Utility.RandomDouble() < 0.05 )
+				PackItem( new BallOfSummoning() );
 		}
 
 		public override int GetAngerSound()

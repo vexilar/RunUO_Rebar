@@ -5,7 +5,7 @@ using System.IO;
 //using Server.Spells.Chivalry;
 using Server.Items;
 //using Server.Spells.Necromancy;
-//using Server.Spells.Ninjitsu;
+using Server.Spells.Ninjitsu;
 
 namespace Server.Spells
 {

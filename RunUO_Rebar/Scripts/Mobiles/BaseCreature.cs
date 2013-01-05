@@ -2219,9 +2219,9 @@ namespace Server.Mobiles
 				case AIType.AI_OrcScout:
 					m_AI = new OrcScoutAI(this);			         
 				        break;
-                //case AIType.AI_Ninja:
-                //    m_AI = new NinjaAI(this);
-                //    break;
+				case AIType.AI_Ninja:
+					m_AI = new NinjaAI(this);
+					break;
 // PAPPA SMURF's Spellbinder
 				case AIType.AI_Spellbinder:
 					m_AI = new SpellbinderAI(this);

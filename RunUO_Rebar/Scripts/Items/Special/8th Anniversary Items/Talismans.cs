@@ -1,6 +1,6 @@
 ﻿using System;
 using Server.Mobiles;
-//using Server.Spells.Ninjitsu;
+using Server.Spells.Ninjitsu;
 
 namespace Server.Items
 {
@@ -54,7 +54,7 @@ namespace Server.Items
 			{
 				Mobile m = (Mobile) parent;
 
-                //AnimalForm.RemoveContext( m, true );
+				AnimalForm.RemoveContext( m, true );
 			}
 		}
 
