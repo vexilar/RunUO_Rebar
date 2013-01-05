@@ -6,7 +6,7 @@ using Server.Targeting;
 using Server.Mobiles;
 using Server.Spells;
 using Server.Spells.Necromancy;
-//using Server.Spells.Bushido;
+using Server.Spells.Bushido;
 using Server.Spells.Ninjitsu;
 using Server.Factions;
 using Server.Engines.Craft;
@@ -889,7 +889,7 @@ namespace Server.Items
 					bonus += 10;
 
 				// Bonus granted by successful use of Honorable Execution.
-				//bonus += HonorableExecution.GetSwingBonus( m );
+				bonus += HonorableExecution.GetSwingBonus( m );
 
 				if( DualWield.Registry.Contains( m ) )
 					bonus += ((DualWield.DualWieldTimer)DualWield.Registry[m]).BonusSwingSpeed;
@@ -1103,8 +1103,8 @@ namespace Server.Items
 					chance += 0.05;
 
 				// Evasion grants a variable bonus post ML. 50% prior.
-				//if ( Evasion.IsEvading( defender ) )
-				//	chance *= Evasion.GetParryScalar( defender );
+				if ( Evasion.IsEvading( defender ) )
+					chance *= Evasion.GetParryScalar( defender );
 
 				// Low dexterity lowers the chance.
 				if ( defender.Dex < 80 )
@@ -1134,8 +1134,8 @@ namespace Server.Items
 				}
 
 				// Evasion grants a variable bonus post ML. 50% prior.
-				//if( Evasion.IsEvading( defender ) )
-				//	chance *= Evasion.GetParryScalar( defender );
+				if( Evasion.IsEvading( defender ) )
+					chance *= Evasion.GetParryScalar( defender );
 
 				// Low dexterity lowers the chance.
 				if( defender.Dex < 80 )
@@ -1164,9 +1164,9 @@ namespace Server.Items
 					damage = 0;
 
 					// Successful block removes the Honorable Execution penalty.
-					//HonorableExecution.RemovePenalty( defender );
+					HonorableExecution.RemovePenalty( defender );
 
-					//if ( CounterAttack.IsCountering( defender ) )
+					if ( CounterAttack.IsCountering( defender ) )
 					{
 						BaseWeapon weapon = defender.Weapon as BaseWeapon;
 
@@ -1176,10 +1176,10 @@ namespace Server.Items
 							weapon.OnSwing( defender, attacker );
 						}
 
-						//CounterAttack.StopCountering( defender );
+						CounterAttack.StopCountering( defender );
 					}
 
-					//if ( Confidence.IsConfident( defender ) )
+					if ( Confidence.IsConfident( defender ) )
 					{
 						defender.SendLocalizedMessage( 1063117 ); // Your confidence reassures you as you successfully block your opponent's blow.
 

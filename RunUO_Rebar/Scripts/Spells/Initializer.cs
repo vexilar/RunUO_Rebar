@@ -125,12 +125,12 @@ namespace Server.Spells
 				if ( Core.SE )
 				{
 					// Samurai abilities
-                    //Register( 400, typeof( Bushido.HonorableExecution ) );
-                    //Register( 401, typeof( Bushido.Confidence ) );
-                    //Register( 402, typeof( Bushido.Evasion ) );
-                    //Register( 403, typeof( Bushido.CounterAttack ) );
-                    //Register( 404, typeof( Bushido.LightningStrike ) );
-                    //Register( 405, typeof( Bushido.MomentumStrike ) );
+					Register( 400, typeof( Bushido.HonorableExecution ) );
+					Register( 401, typeof( Bushido.Confidence ) );
+					Register( 402, typeof( Bushido.Evasion ) );
+					Register( 403, typeof( Bushido.CounterAttack ) );
+					Register( 404, typeof( Bushido.LightningStrike ) );
+					Register( 405, typeof( Bushido.MomentumStrike ) );
 
 					// Ninja abilities
 					Register( 500, typeof( Ninjitsu.FocusAttack ) );

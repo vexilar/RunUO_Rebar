@@ -8,7 +8,7 @@ using Server.Mobiles;
 using Server.Targeting;
 using Server.Engines.PartySystem;
 using Server.Misc;
-//using Server.Spells.Bushido;
+using Server.Spells.Bushido;
 using Server.Spells.Necromancy;
 using Server.Spells.Ninjitsu;
 using System.Collections.Generic;
