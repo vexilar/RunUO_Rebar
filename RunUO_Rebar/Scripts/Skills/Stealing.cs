@@ -173,10 +173,10 @@ namespace Server.SkillHandlers
 				{
 					m_Thief.SendLocalizedMessage( 502710 ); // You can't steal that!
 				}
-				///else if ( toSteal.LootType == LootType.Newbied || toSteal.CheckBlessed( root ) )
-				///{
-				///	m_Thief.SendLocalizedMessage( 502710 ); // You can't steal that!
-				///}
+                else if (toSteal.LootType == LootType.Newbied || toSteal.CheckBlessed(root))
+                {
+                    m_Thief.SendLocalizedMessage(502710); // You can't steal that!
+                }
 				else if ( Core.AOS && si == null && toSteal is Container )///!!!need to add container in container mechanisms!!!
 				{
 					m_Thief.SendLocalizedMessage( 502710 ); // You can't steal that!
