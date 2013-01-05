@@ -82,27 +82,27 @@ namespace Server.Items
 			}
 		}
 
-        public override void Drink(Mobile from)
-        {
-            //if (TransformationSpellHelper.UnderTransformation(from, typeof(Spells.Necromancy.VampiricEmbraceSpell)))
-            //{
-            //    from.SendLocalizedMessage(1061652); // The garlic in the potion would surely kill you.
-            //}
-            if (from.Poisoned)
-            {
-                DoCure(from);
+		public override void Drink( Mobile from )
+		{
+			if ( TransformationSpellHelper.UnderTransformation( from, typeof( Spells.Necromancy.VampiricEmbraceSpell ) ) )
+			{
+				from.SendLocalizedMessage( 1061652 ); // The garlic in the potion would surely kill you.
+			}
+			else if ( from.Poisoned )
+			{
+				DoCure( from );
 
-                BasePotion.PlayDrinkEffect(from);
+				BasePotion.PlayDrinkEffect( from );
 
-                from.FixedParticles(0x373A, 10, 15, 5012, EffectLayer.Waist);
-                from.PlaySound(0x1E0);
+				from.FixedParticles( 0x373A, 10, 15, 5012, EffectLayer.Waist );
+				from.PlaySound( 0x1E0 );
 
-                this.Consume();
-            }
-            else
-            {
-                from.SendLocalizedMessage(1042000); // You are not poisoned.
-            }
-        }
+				this.Consume();
+			}
+			else
+			{
+				from.SendLocalizedMessage( 1042000 ); // You are not poisoned.
+			}
+		}
 	}
 }

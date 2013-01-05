@@ -14,7 +14,7 @@ using Server.Engines.PartySystem;
 using Server.Factions;
 //using Server.Spells.Bushido;
 using Server.Spells.Spellweaving;
-//using Server.Spells.Necromancy;
+using Server.Spells.Necromancy;
 
 namespace Server.Mobiles
 {
@@ -986,8 +986,8 @@ namespace Server.Mobiles
 				if ( !Summoned )
 					return false;
 
-                //if ( m_ControlMaster != null && SummonFamiliarSpell.Table.Contains( m_ControlMaster ) )
-                //    return SummonFamiliarSpell.Table[ m_ControlMaster ] == this;
+				if ( m_ControlMaster != null && SummonFamiliarSpell.Table.Contains( m_ControlMaster ) )
+					return SummonFamiliarSpell.Table[ m_ControlMaster ] == this;
 
 				return false;
 			}
@@ -1000,16 +1000,16 @@ namespace Server.Mobiles
 			if ( Core.AOS && !this.Summoned && this.Controlled && 0.2 > Utility.RandomDouble() )
 				amount = (int)(amount * BonusPetDamageScalar);
 
-            //if ( Spells.Necromancy.EvilOmenSpell.TryEndEffect( this ) )
-            //    amount = (int)(amount * 1.25);
+			if ( Spells.Necromancy.EvilOmenSpell.TryEndEffect( this ) )
+				amount = (int)(amount * 1.25);
 
-            //Mobile oath = Spells.Necromancy.BloodOathSpell.GetBloodOath( from );
+			Mobile oath = Spells.Necromancy.BloodOathSpell.GetBloodOath( from );
 
-            //if ( oath == this )
-            //{
-            //    amount = (int)(amount * 1.1);
-            //    from.Damage( amount, from );
-            //}
+			if ( oath == this )
+			{
+				amount = (int)(amount * 1.1);
+				from.Damage( amount, from );
+			}
 
 			base.Damage( amount, from );
 
@@ -1049,8 +1049,8 @@ namespace Server.Mobiles
 			if ( !Alive || IsDeadPet )
 				return ApplyPoisonResult.Immune;
 
-            //if ( Spells.Necromancy.EvilOmenSpell.TryEndEffect( this ) )
-            //    poison = PoisonImpl.IncreaseLevel( poison );
+			if ( Spells.Necromancy.EvilOmenSpell.TryEndEffect( this ) )
+				poison = PoisonImpl.IncreaseLevel( poison );
 
 			ApplyPoisonResult result = base.ApplyPoison( from, poison );
 
@@ -1899,8 +1899,8 @@ namespace Server.Mobiles
 
 			AddFollowers();
 
-            //if ( IsAnimatedDead )
-            //    Spells.Necromancy.AnimateDeadSpell.Register( m_SummonMaster, this );
+			if ( IsAnimatedDead )
+				Spells.Necromancy.AnimateDeadSpell.Register( m_SummonMaster, this );
 		}
 
 		public virtual bool IsHumanInTown()
@@ -2777,8 +2777,8 @@ namespace Server.Mobiles
 
 			FocusMob = null;
 
-            //if ( IsAnimatedDead )
-            //    Spells.Necromancy.AnimateDeadSpell.Unregister( m_SummonMaster, this );
+			if ( IsAnimatedDead )
+				Spells.Necromancy.AnimateDeadSpell.Unregister( m_SummonMaster, this );
 
 			base.OnAfterDelete();
 		}
@@ -4131,16 +4131,16 @@ namespace Server.Mobiles
 					pack.DisplayTo( from );
 			}
 
-            //if ( this.DeathAdderCharmable && from.CanBeHarmful( this, false ) )
-            //{
-            //    DeathAdder da = Spells.Necromancy.SummonFamiliarSpell.Table[from] as DeathAdder;
+			if ( this.DeathAdderCharmable && from.CanBeHarmful( this, false ) )
+			{
+				DeathAdder da = Spells.Necromancy.SummonFamiliarSpell.Table[from] as DeathAdder;
 
-            //    if ( da != null && !da.Deleted )
-            //    {
-            //        from.SendAsciiMessage( "You charm the snake.  Select a target to attack." );
-            //        from.Target = new DeathAdderCharmTarget( this );
-            //    }
-            //}
+				if ( da != null && !da.Deleted )
+				{
+					from.SendAsciiMessage( "You charm the snake.  Select a target to attack." );
+					from.Target = new DeathAdderCharmTarget( this );
+				}
+			}
 
 			base.OnDoubleClick( from );
 		}
@@ -4159,9 +4159,9 @@ namespace Server.Mobiles
 				if ( !m_Charmed.DeathAdderCharmable || m_Charmed.Combatant != null || !from.CanBeHarmful( m_Charmed, false ) )
 					return;
 
-                //DeathAdder da = Spells.Necromancy.SummonFamiliarSpell.Table[from] as DeathAdder;
-                //if ( da == null || da.Deleted )
-                //    return;
+				DeathAdder da = Spells.Necromancy.SummonFamiliarSpell.Table[from] as DeathAdder;
+				if ( da == null || da.Deleted )
+					return;
 
 				Mobile targ = targeted as Mobile;
 				if ( targ == null || !from.CanBeHarmful( targ, false ) )

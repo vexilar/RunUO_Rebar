@@ -12,7 +12,7 @@ using Server.Spells.Fourth;
 using Server.Spells.Fifth;
 using Server.Spells.Sixth;
 using Server.Spells.Seventh;
-//using Server.Spells.Necromancy;
+using Server.Spells.Necromancy;
 using Server.Misc;
 using Server.Regions;
 using Server.SkillHandlers;
@@ -229,15 +229,15 @@ namespace Server.Mobiles
 			if ( necro < 1 )
 				necro = 1;
 				
-            //if ( m_Mobile.Skills[SkillName.Necromancy].Value > 30 && Utility.Random( necro ) > Utility.Random( mage ) )
-            //{							
-            //    switch ( Utility.Random( necro - 5 ) )
-            //    {
-            //        case 0: case 1: return new CorpseSkinSpell( m_Mobile, null );
-            //        case 2: case 3: return new MindRotSpell( m_Mobile, null );
-            //        default: return new MindRotSpell( m_Mobile, null );
-            //    }
-            //}
+			if ( m_Mobile.Skills[SkillName.Necromancy].Value > 30 && Utility.Random( necro ) > Utility.Random( mage ) )
+			{							
+				switch ( Utility.Random( necro - 5 ) )
+				{
+					case 0: case 1: return new CorpseSkinSpell( m_Mobile, null );
+					case 2: case 3: return new MindRotSpell( m_Mobile, null );
+					default: return new MindRotSpell( m_Mobile, null );
+				}
+			}
 			
 			if ( Utility.RandomBool() && mage > 3 )
 					return new CurseSpell( m_Mobile, null );
@@ -290,8 +290,8 @@ namespace Server.Mobiles
 				{
 					m_Mobile.DebugSay( "Attempting to BloodOath" );
 
-                    //if ( !c.Poisoned )
-                    //    spell = new BloodOathSpell( m_Mobile, null );
+					if ( !c.Poisoned )
+						spell = new BloodOathSpell( m_Mobile, null );
 
 					break;
 				}
@@ -331,8 +331,8 @@ namespace Server.Mobiles
 				{
 					m_Mobile.DebugSay( "Attempting to blood oath" );
 										
-                    //if ( m_Mobile.Skills[SkillName.Necromancy].Value > 30 && BloodOathSpell.GetBloodOath( c ) != m_Mobile )
-                    //    spell = new BloodOathSpell( m_Mobile, null );
+					if ( m_Mobile.Skills[SkillName.Necromancy].Value > 30 && BloodOathSpell.GetBloodOath( c ) != m_Mobile )
+						spell = new BloodOathSpell( m_Mobile, null );
 						
 					break;
 				}
@@ -470,14 +470,14 @@ namespace Server.Mobiles
 					spell = DoDispel( toDispel );
 				}
 				
-                //else if ( (c.Spell is HealSpell || c.Spell is GreaterHealSpell) && !c.Poisoned ) // They have a heal spell out
-                //{
-                //    spell = new BloodOathSpell( m_Mobile, null );
-                //}
-                //else
-                //{
-                //    spell = ChooseSpell( c );
-                //}
+				else if ( (c.Spell is HealSpell || c.Spell is GreaterHealSpell) && !c.Poisoned ) // They have a heal spell out
+				{
+					spell = new BloodOathSpell( m_Mobile, null );
+				}
+				else
+				{
+					spell = ChooseSpell( c );
+				}
 
 				// Now we have a spell picked
 				// Move first before casting

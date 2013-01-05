@@ -1,7 +1,7 @@
 using System;
 using Server.ContextMenus;
 using Server.Mobiles;
-//using Server.Spells.Necromancy;
+using Server.Spells.Necromancy;
 using Server.Spells.Ninjitsu;
 using Server.Targeting;
 
@@ -291,11 +291,11 @@ namespace Server.Items
 
 				if (weapon.Poison != null && weapon.PoisonCharges > 0)
 				{
-                    //if (EvilOmenSpell.TryEndEffect(target))
-                    //{
-                    //    target.ApplyPoison(from, Poison.GetPoison(weapon.Poison.Level + 1));
-                    //}
-					//else
+					if (EvilOmenSpell.TryEndEffect(target))
+					{
+						target.ApplyPoison(from, Poison.GetPoison(weapon.Poison.Level + 1));
+					}
+					else
 					{
 						target.ApplyPoison(from, weapon.Poison);
 					}

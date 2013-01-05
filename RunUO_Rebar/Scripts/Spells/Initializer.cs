@@ -90,25 +90,25 @@ namespace Server.Spells
 			if ( Core.AOS )
 			{
 				// Necromancy spells
-                //Register( 100, typeof( Necromancy.AnimateDeadSpell ) );
-                //Register( 101, typeof( Necromancy.BloodOathSpell ) );
-                //Register( 102, typeof( Necromancy.CorpseSkinSpell ) );
-                //Register( 103, typeof( Necromancy.CurseWeaponSpell ) );
-                //Register( 104, typeof( Necromancy.EvilOmenSpell ) );
-                //Register( 105, typeof( Necromancy.HorrificBeastSpell ) );
-                //Register( 106, typeof( Necromancy.LichFormSpell ) );
-                //Register( 107, typeof( Necromancy.MindRotSpell ) );
-                //Register( 108, typeof( Necromancy.PainSpikeSpell ) );
-                //Register( 109, typeof( Necromancy.PoisonStrikeSpell ) );
-                //Register( 110, typeof( Necromancy.StrangleSpell ) );
-                //Register( 111, typeof( Necromancy.SummonFamiliarSpell ) );
-                //Register( 112, typeof( Necromancy.VampiricEmbraceSpell ) );
-                //Register( 113, typeof( Necromancy.VengefulSpiritSpell ) );
-                //Register( 114, typeof( Necromancy.WitherSpell ) );
-                //Register( 115, typeof( Necromancy.WraithFormSpell ) );
+				Register( 100, typeof( Necromancy.AnimateDeadSpell ) );
+				Register( 101, typeof( Necromancy.BloodOathSpell ) );
+				Register( 102, typeof( Necromancy.CorpseSkinSpell ) );
+				Register( 103, typeof( Necromancy.CurseWeaponSpell ) );
+				Register( 104, typeof( Necromancy.EvilOmenSpell ) );
+				Register( 105, typeof( Necromancy.HorrificBeastSpell ) );
+				Register( 106, typeof( Necromancy.LichFormSpell ) );
+				Register( 107, typeof( Necromancy.MindRotSpell ) );
+				Register( 108, typeof( Necromancy.PainSpikeSpell ) );
+				Register( 109, typeof( Necromancy.PoisonStrikeSpell ) );
+				Register( 110, typeof( Necromancy.StrangleSpell ) );
+				Register( 111, typeof( Necromancy.SummonFamiliarSpell ) );
+				Register( 112, typeof( Necromancy.VampiricEmbraceSpell ) );
+				Register( 113, typeof( Necromancy.VengefulSpiritSpell ) );
+				Register( 114, typeof( Necromancy.WitherSpell ) );
+				Register( 115, typeof( Necromancy.WraithFormSpell ) );
 
 				if( Core.SE )
-                    //Register( 116, typeof( Necromancy.ExorcismSpell ) );
+					Register( 116, typeof( Necromancy.ExorcismSpell ) );
 
 				// Paladin abilities
                 //Register( 200, typeof( Chivalry.CleanseByFireSpell ) );

@@ -8,7 +8,7 @@ using Server.Network;
 using Server.Factions;
 using Server.Spells.Seventh;
 using Server.Spells.Fifth;
-//using Server.Spells.Necromancy;
+using Server.Spells.Necromancy;
 using Server.Spells;
 using Server.Spells.Ninjitsu;
 

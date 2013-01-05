@@ -2,7 +2,7 @@ using System;
 using Server;
 using Server.Items;
 using Server.Spells;
-//using Server.Spells.Necromancy;
+using Server.Spells.Necromancy;
 using Server.Spells.Ninjitsu;
 using Server.Mobiles;
 
@@ -69,8 +69,8 @@ namespace Server.Misc
 			if( Core.ML && from is PlayerMobile )	//does racial bonus go before/after?
 				points = Math.Min( points, 18 );
 
-            //if ( CheckTransform( from, typeof( HorrificBeastSpell ) ) )
-            //    points += 20;
+			if ( CheckTransform( from, typeof( HorrificBeastSpell ) ) )
+				points += 20;
 
 			if ( CheckAnimal( from, typeof( Dog ) ) || CheckAnimal( from, typeof( Cat ) ) )
 				points += from.Skills[SkillName.Ninjitsu].Fixed / 30;
@@ -92,8 +92,8 @@ namespace Server.Misc
 
 			int cappedPoints = AosAttributes.GetValue( from, AosAttribute.RegenStam );
 
-            //if ( CheckTransform( from, typeof( VampiricEmbraceSpell ) ) )
-            //    cappedPoints += 15;
+			if ( CheckTransform( from, typeof( VampiricEmbraceSpell ) ) )
+				cappedPoints += 15;
 
 			if ( CheckAnimal( from, typeof( Kirin ) ) )
 				cappedPoints += 20;
@@ -140,10 +140,10 @@ namespace Server.Misc
 
 				int cappedPoints = AosAttributes.GetValue( from, AosAttribute.RegenMana );
 
-                //if ( CheckTransform( from, typeof( VampiricEmbraceSpell ) ) )
-                //    cappedPoints += 3;
-                //else if ( CheckTransform( from, typeof( LichFormSpell ) ) )
-                //    cappedPoints += 13;
+				if ( CheckTransform( from, typeof( VampiricEmbraceSpell ) ) )
+					cappedPoints += 3;
+				else if ( CheckTransform( from, typeof( LichFormSpell ) ) )
+					cappedPoints += 13;
 
 				if( Core.ML && from is PlayerMobile )
 					cappedPoints = Math.Min( cappedPoints, 18 );

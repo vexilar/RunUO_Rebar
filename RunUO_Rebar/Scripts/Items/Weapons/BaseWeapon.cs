@@ -5,7 +5,7 @@ using Server.Network;
 using Server.Targeting;
 using Server.Mobiles;
 using Server.Spells;
-//using Server.Spells.Necromancy;
+using Server.Spells.Necromancy;
 //using Server.Spells.Bushido;
 using Server.Spells.Ninjitsu;
 using Server.Factions;
@@ -1469,11 +1469,11 @@ namespace Server.Items
 
 			TransformContext context = TransformationSpellHelper.GetContext( defender );
 
-            //if( (m_Slayer == SlayerName.Silver || m_Slayer2 == SlayerName.Silver) && context != null && context.Spell is NecromancerSpell && context.Type != typeof( HorrificBeastSpell ) )
-            //{
-            //    //factor *= 1.25; // Every necromancer transformation other than horrific beast takes an additional 25% damage
-            //    percentageBonus += 25;
-            //}
+			if( (m_Slayer == SlayerName.Silver || m_Slayer2 == SlayerName.Silver) && context != null && context.Spell is NecromancerSpell && context.Type != typeof( HorrificBeastSpell ) )
+			{
+				//factor *= 1.25; // Every necromancer transformation other than horrific beast takes an additional 25% damage
+				percentageBonus += 25;
+			}
 
 			if ( attacker is PlayerMobile && !(Core.ML && defender is PlayerMobile ))
 			{
@@ -1590,7 +1590,7 @@ namespace Server.Items
 				int lifeLeech = 0;
 				int stamLeech = 0;
 				int manaLeech = 0;
-                //int wraithLeech = 0;
+				int wraithLeech = 0;
 
 				if ( (int)(m_AosWeaponAttributes.HitLeechHits * propertyBonus) > Utility.Random( 100 ) )
 					lifeLeech += 30; // HitLeechHits% chance to leech 30% of damage as hit points
@@ -1606,18 +1606,18 @@ namespace Server.Items
 
 				context = TransformationSpellHelper.GetContext( attacker );
 
-                //if ( context != null && context.Type == typeof( VampiricEmbraceSpell ) )
-                //    lifeLeech += 20; // Vampiric embrace gives an additional 20% life leech
+				if ( context != null && context.Type == typeof( VampiricEmbraceSpell ) )
+					lifeLeech += 20; // Vampiric embrace gives an additional 20% life leech
 
-                //if ( context != null && context.Type == typeof( WraithFormSpell ) )
-                //{
-                //    wraithLeech = (5 + (int)((15 * attacker.Skills.SpiritSpeak.Value) / 100)); // Wraith form gives an additional 5-20% mana leech
+				if ( context != null && context.Type == typeof( WraithFormSpell ) )
+				{
+					wraithLeech = (5 + (int)((15 * attacker.Skills.SpiritSpeak.Value) / 100)); // Wraith form gives an additional 5-20% mana leech
 
-                //    // Mana leeched by the Wraith Form spell is actually stolen, not just leeched.
-                //    defender.Mana -= AOS.Scale( damageGiven, wraithLeech );
+					// Mana leeched by the Wraith Form spell is actually stolen, not just leeched.
+					defender.Mana -= AOS.Scale( damageGiven, wraithLeech );
 
-                //    manaLeech += wraithLeech;
-                //}
+					manaLeech += wraithLeech;
+				}
 
 				if ( lifeLeech != 0 )
 					attacker.Hits += AOS.Scale( damageGiven, lifeLeech );
@@ -2216,8 +2216,8 @@ namespace Server.Items
 			int damageBonus = AosAttributes.GetValue( attacker, AosAttribute.WeaponDamage );
 
 			// Horrific Beast transformation gives a +25% bonus to damage.
-            //if( TransformationSpellHelper.UnderTransformation( attacker, typeof( HorrificBeastSpell ) ) )
-            //    damageBonus += 25;
+			if( TransformationSpellHelper.UnderTransformation( attacker, typeof( HorrificBeastSpell ) ) )
+				damageBonus += 25;
 
 			// Divine Fury gives a +10% bonus to damage.
             //if ( Spells.Chivalry.DivineFurySpell.UnderEffect( attacker ) )
