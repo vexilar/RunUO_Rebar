@@ -23,7 +23,7 @@ namespace Server.Misc
 
 		public static readonly string EmailServer = null;
 
-		public static readonly string CrashAddresses = "deagle.shroeder@gmail.com;wolf.m.sean@gmail.com";
+		public static readonly string CrashAddresses = null;
 		public static readonly string SpeechLogPageAddresses = null;
 
 		private static Regex _pattern = new Regex( @"^[a-z0-9.+_-]+@([a-z0-9-]+.)+[a-z]+$", RegexOptions.IgnoreCase );
