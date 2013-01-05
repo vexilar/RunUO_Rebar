@@ -137,8 +137,8 @@ namespace Server.Mobiles
 			if ( !base.CheckItemUse( from, item ) )
 				return false;
 
-            //if ( item is Container || item is Engines.BulkOrders.BulkOrderBook )
-            //    return true;
+			if ( item is Container || item is Engines.BulkOrders.BulkOrderBook )
+				return true;
 
 			from.SendLocalizedMessage( 500447 ); // That is not accessible.
 			return false;
@@ -1511,10 +1511,10 @@ namespace Server.Mobiles
 						else
 							setPrice = true;
 					}
-                    //else if ( item is BaseBook || item is Engines.BulkOrders.BulkOrderBook )
-                    //{
-                    //    setPrice = true;
-                    //}
+					else if ( item is BaseBook || item is Engines.BulkOrders.BulkOrderBook )
+					{
+						setPrice = true;
+					}
 					else
 					{
 						m_Vendor.SayTo( from, 1043301 ); // Only the following may be made not-for-sale: books, containers, keyrings, and items in for-sale containers.
