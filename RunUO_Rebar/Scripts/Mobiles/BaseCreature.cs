@@ -13,7 +13,7 @@ using Server.Engines.Quests;
 using Server.Engines.PartySystem;
 using Server.Factions;
 //using Server.Spells.Bushido;
-//using Server.Spells.Spellweaving;
+using Server.Spells.Spellweaving;
 //using Server.Spells.Necromancy;
 
 namespace Server.Mobiles
@@ -844,8 +844,8 @@ namespace Server.Mobiles
 			if ( !(m is BaseCreature) || m is Server.Engines.Quests.Haven.MilitiaFighter )
 				return true;
 
-            //if( TransformationSpellHelper.UnderTransformation( m, typeof( EtherealVoyageSpell ) ) )
-            //    return false;
+			if( TransformationSpellHelper.UnderTransformation( m, typeof( EtherealVoyageSpell ) ) )
+				return false;
 
 			if ( m is PlayerMobile && ( (PlayerMobile)m ).HonorActive )
 				return false;
@@ -4501,7 +4501,7 @@ namespace Server.Mobiles
 					this.OwnerAbandonTime = DateTime.MinValue;
 				}
 
-				//GiftOfLifeSpell.HandleDeath( this );
+				GiftOfLifeSpell.HandleDeath( this );
 
 				CheckStatTimers();
 			}
