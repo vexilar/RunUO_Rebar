@@ -80,7 +80,7 @@ namespace Server.Commands
 						case 1: maps = fel; break;  // Felucca
 						case 2: maps = tram; break; // Trammel
 						case 3: maps = ilsh; break; // Ilshenar
-                        case 4: maps = malas; break; // Malas
+						case 4: maps = malas; break; // Malas
 						case 5: maps = tokuno; break; // Tokuno Islands
 					}
 

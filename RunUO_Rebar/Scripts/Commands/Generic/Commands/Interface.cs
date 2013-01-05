@@ -341,12 +341,12 @@ namespace Server.Commands.Generic
 					m_From.SendGump( new InterfaceGump( m_From, m_Columns, m_List, m_Page, m_Item ) );
 					break;
 				}
-                //case 4: // Go there
-                //{
-                //    m_From.SendGump( new InterfaceItemGump( m_From, m_Columns, m_List, m_Page, m_Item ) );
-                //    InvokeCommand( String.Format( "Go {0}", m_Item.Serial.Value ) );
-                //    break;
-                //}
+				case 4: // Go there
+				{
+					m_From.SendGump( new InterfaceItemGump( m_From, m_Columns, m_List, m_Page, m_Item ) );
+					InvokeCommand( String.Format( "Go {0}", m_Item.Serial.Value ) );
+					break;
+				}
 				case 5: // Move to target
 				{
 					m_From.SendGump( new InterfaceItemGump( m_From, m_Columns, m_List, m_Page, m_Item ) );
@@ -506,12 +506,12 @@ namespace Server.Commands.Generic
 
 					break;
 				}
-                case 4: // Go there
-                {
-                    m_From.SendGump(new InterfaceMobileGump(m_From, m_Columns, m_List, m_Page, m_Mobile));
-                    InvokeCommand(String.Format("Go {0}", m_Mobile.Serial.Value));
-                    break;
-                }
+				case 4: // Go there
+				{
+					m_From.SendGump( new InterfaceMobileGump( m_From, m_Columns, m_List, m_Page, m_Mobile ) );
+					InvokeCommand( String.Format( "Go {0}", m_Mobile.Serial.Value ) );
+					break;
+				}
 				case 5: // Bring them here
 				{
 					if ( m_From.Map == null || m_From.Map == Map.Internal )
