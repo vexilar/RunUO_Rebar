@@ -236,11 +236,11 @@ namespace Server.Items
 						else if ( ore.ItemID == 0x19B9 )
 						{
 							newID = m_Ore.ItemID;
-							plusWeight = ore.Amount;
+							plusWeight = ore.Amount * 2;
 						}
 						else
 						{
-							plusWeight = m_Ore.Amount;
+							plusWeight = m_Ore.Amount * 2;
 						}
 					}
 
